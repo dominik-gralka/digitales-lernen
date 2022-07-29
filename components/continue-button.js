@@ -1,5 +1,5 @@
 import Link from 'next/link.js';
-import { Overview } from '../pages/kurse/overview';
+import { Overview } from './overview';
 import { ProgressBar } from './progressbar';
 
 export const Continue = ({ kurs, section, enabled }) => {
