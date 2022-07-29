@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Overview } from '../pages/kurse/overview';
+import { Overview } from './overview';
 import { parseCookies, setCookie, destroyCookie } from 'nookies'
 import useSWR from 'swr'
 

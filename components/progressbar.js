@@ -1,4 +1,4 @@
-import { Overview } from "../pages/kurse/overview";
+import { Overview } from './overview';
 
 export const ProgressBar = ({ kurs, section }) => {
     // Progress Text
