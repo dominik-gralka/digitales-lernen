@@ -1,5 +1,6 @@
 import { parseCookies, setCookie, destroyCookie } from 'nookies'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react';
 
 export default function Logout() {
     // Destroy cookie
@@ -7,5 +8,7 @@ export default function Logout() {
     // Redirect to login page
     const router = useRouter();
     
-    router.push('/login');
+    useEffect(() => {
+        router.push('/login');
+    }, [])
 }
