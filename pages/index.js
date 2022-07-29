@@ -27,6 +27,8 @@ export default function Home({ cookies }) {
         <h1 className="text-4xl font-bold py-2">Willkommen zurück,</h1>
         <h2 className="text-lg pt-2 font-medium pb-10">hier sind deine Kurse.</h2>
 
+        { cookies.fromClient ? (<>
+
         <Recommended
           client={ cookies.fromClient }
         />
@@ -38,6 +40,11 @@ export default function Home({ cookies }) {
           <Card kurs="ober-und-untersumme" />
           </div>
         </div>
+
+        </>) : (
+          <a>Bitte melde dich an um fortzufahren.</a>
+        )
+        }
         
       </main>
 

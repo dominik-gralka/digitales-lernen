@@ -9,12 +9,11 @@ export const CookieHandler = () => {
 
     const router = useRouter();
 
+    useEffect(() => {
     if (!cookies.fromClient) {
         // Redirect to login page in anonymous function
-        useEffect(() => {
             router.push('/login')
-        }, [])
-    }
+    }}, [])
 
     return(<></>)
 
