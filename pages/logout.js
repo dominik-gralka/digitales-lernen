@@ -11,4 +11,6 @@ export default function Logout() {
     useEffect(() => {
         router.push('/login');
     }, [])
+
+    return (<></>);
 }
