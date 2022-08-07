@@ -3,20 +3,27 @@ const uri = "mongodb+srv://" + process.env.MONGODB_USER + ":" + process.env.MONG
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
 
     const user_query = req.query.user;
     const kurs = req.query.kurs;
 
-    client.connect(err => {
-        const collection = client.db("digitl").collection(user_query);
+    if (!user_query || !kurs) {
+        res.status(400).json({ error: 'Bad Request' });
+        return;
+    }
 
-        // Find and return the newest document with type: "progress"
-        collection.find({ kurs: kurs }).sort({ _id: -1 }).limit(1).toArray(function (err, result) {
-            if (err) throw err;
-            res.status(200).json(result[0]);
-        });
+    try {
+        const conn = await client.connect()
+        const collection = conn.db("digitl").collection(user_query);
 
-    });
+        // Find latest document with kurs = kurs
+        const result = await collection.findOne({ kurs: kurs });
+        res.status(200).json(result);
+
+    } catch(e) {
+        console.log(e)
+        res.status(500).json({ error: e.message });
+    }
 
 }

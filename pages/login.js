@@ -30,7 +30,7 @@ export default function Login() {
         <div className="flex flex-col items-center lg:pt-10">
 
           <div className="pt-5 text-center flex flex-col items-center">
-            <img src="/icon01.png" alt="Welcome Image" className="pb-10" />
+            <img src="https://via.placeholder.com/400x400" alt="Welcome Image" className="pb-10" />
             <h1 className="text-4xl font-bold py-2">Willkommen,</h1>
             <h2 className="text-lg pt-2 font-medium">bitte geben Sie Ihren 6-stelligen Anmeldecode ein.</h2>
           </div>
@@ -38,6 +38,7 @@ export default function Login() {
           <form className="flex flex-col gap-4 pt-10 lg:w-1/4 w-full" onSubmit={(e) => {
             handleCookies(e.target.user.value)
             // Redirect to / and reload
+            e.preventDefault()
             router.push('/')
           }
           }>
