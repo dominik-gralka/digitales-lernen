@@ -35,10 +35,10 @@ export const MultipleChoiceQuiz = ({ question, options, answer, image }) => {
 
                     { /* Multiple Choice with max. one value */}
 
-                    <form className="flex flex-col lg:gap-5 gap-2 pt-5 lg:flex-col lg:pt-5 w-full">
+                    <form className="flex flex-col lg:gap-5 gap-2 pt-5 lg:flex-col lg:pt-5 w-full pb-52 lg:pb-0">
                         {options.map((option, index) => {
                             return (
-                                <div className="flex flex-row items-center justify-start w-full lg:w-auto bg-gray-50 p-2.5 border-2 border-gray-100 rounded-md lg:h-auto h-12" key={index} onClick={
+                                <div className={`${selected === index ? 'bg-blue-100 border-2 border-blue-300' : 'bg-gray-50 border-gray-100 border-2'} flex flex-row items-center justify-start w-full lg:w- p-2.5 border- rounded-md lg:h-auto h-12`} key={index} onClick={
                                     /* Select radio button when clicked on div */
                                     () => {
                                         setSelected(index)

@@ -11,9 +11,9 @@ export default function Home({ cookies }) {
 
   return (
     <div className="px-10 lg:px-32 min-h-screen">
-      <Navbar/>
+      <Navbar />
 
-      <CookieHandler/>
+      <CookieHandler />
 
       <Head>
         <title>Digitales Lernen</title>
@@ -27,32 +27,37 @@ export default function Home({ cookies }) {
         <h1 className="text-4xl font-bold py-2">Willkommen zurück,</h1>
         <h2 className="text-lg pt-2 font-medium pb-10">hier sind deine Kurse.</h2>
 
-        { cookies.fromClient ? (<>
+        {cookies.fromClient ? (<>
 
-        <Recommended
-          client={ cookies.fromClient }
-        />
+          <Recommended
+            client={cookies.fromClient}
+          />
 
-        <div className="py-10">
-          <h2 className="text-4xl font-medium pb-5">Alle Kurse</h2>
-          <div className="flex flex-col lg:flex-row gap-10">
-          <Card kurs="basics" />
-          <Card kurs="ober-und-untersumme" />
+          <div className="py-10">
+            <h2 className="text-4xl font-medium pb-5">Alle Kurse</h2>
+            <h2 className="text-xl font-medium pb-5">Grundlagen</h2>
+            <div className="flex flex-col lg:flex-row gap-10">
+              <Card kurs="basics" />
+              <Card kurs="ober-und-untersumme" />
+            </div>
+            <h2 className="text-xl font-medium py-5">Wiederholen</h2>
+            <div className="flex flex-col lg:flex-row gap-10">
+              <Card kurs="ableiten" />
+            </div>
           </div>
-        </div>
 
         </>) : (
           <a>Bitte melde dich an um fortzufahren.</a>
         )
         }
-        
+
       </main>
 
     </div>
   )
 }
 
-Home.getInitialProps = async function(ctx) {
+Home.getInitialProps = async function (ctx) {
   // Parse
   const cookies = parseCookies(ctx);
 

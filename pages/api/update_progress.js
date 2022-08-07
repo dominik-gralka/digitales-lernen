@@ -23,8 +23,12 @@ export default function handler(req, res) {
         collection.find({ type: "progress", kurs: kurs_query }).sort({ _id: -1 }).limit(1).toArray(function(err, result) {
             if (err) throw err;
             if (result.length > 0) {
-                collection.replaceOne({ _id: result[0]._id }, newDoc, function(err, result) {
-                    if (err) throw err;;
+                // Delete and create new document
+                collection.deleteOne({ _id: result[0]._id }, function(err, obj) {
+                    if (err) throw err;
+                    collection.insertOne(newDoc, function(err, res) {
+                        if (err) throw err;
+                    });
                 });
             } else {
                 collection.insertOne(newDoc, function(err, result) {

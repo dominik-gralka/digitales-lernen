@@ -506,6 +506,11 @@
   dependencies:
     "delayed-stream" "~1.0.0"
 
+"commander@^2.19.0":
+  "integrity" "sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ=="
+  "resolved" "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz"
+  "version" "2.20.3"
+
 "concat-map@0.0.1":
   "integrity" "sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg=="
   "resolved" "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
@@ -1519,6 +1524,13 @@
     "@next/swc-win32-arm64-msvc" "12.2.3"
     "@next/swc-win32-ia32-msvc" "12.2.3"
     "@next/swc-win32-x64-msvc" "12.2.3"
+
+"nextjs-katex@^0.12.0":
+  "integrity" "sha512-/Euj09A4LZTspWDj9FmLLDVzpa+LBAM++NF+3iMHBpAxqkR1KNvBn9u71t8LDWapf1ptE0DM9Szl643w3EJP8A=="
+  "resolved" "https://registry.npmjs.org/nextjs-katex/-/nextjs-katex-0.12.0.tgz"
+  "version" "0.12.0"
+  dependencies:
+    "commander" "^2.19.0"
 
 "node-releases@^2.0.6":
   "integrity" "sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg=="
