@@ -10,5 +10,11 @@ export const Overview = {
         "description": "Hier erlernen wir die Ober- und Untersumme",
         "sections": 1,
         "preview": "https://img.freepik.com/free-psd/flat-lay-pi-sign-mathematics_23-2148458911.jpg?w=1380&t=st=1658955183~exp=1658955783~hmac=664924893f164bdf836b8709ee17b67b899d0831847c1285157cfecddd76fa90"
+    },
+    "ableiten": {
+        "title": "Ableiten",
+        "description": "Erfrische dein Wissen über das Ableiten",
+        "sections": 3,
+        "preview": "/thumbnails/Ableiten.png"
     }
 }

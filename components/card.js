@@ -17,7 +17,7 @@ export const Card = ({ kurs }) => {
     if (!data) return (
         <div className="w-full lg:w-1/4 border-2 rounded-md px-3 py-3 h-auto">
             <div>
-                <div className="overflow-clip h-32 rounded-md">
+                <div className="overflow-clip h-32 rounded-md flex justify-center items-center">
                     <img src={ info.preview } alt="logo" className="w-full md:hover:bg-h-m_gray transition-all"/>
                 </div>
             </div>
@@ -36,7 +36,7 @@ export const Card = ({ kurs }) => {
     return (
         <div className="w-full lg:w-1/4 border-2 rounded-md px-3 py-3 h-auto">
             <div>
-                <div className="overflow-clip h-32 rounded-md">
+                <div className="overflow-clip h-32 rounded-md flex justify-center items-center">
                     <img src={ info.preview } alt="logo" className="w-full md:hover:bg-h-m_gray transition-all"/>
                 </div>
             </div>
@@ -58,7 +58,11 @@ export const Card = ({ kurs }) => {
             <div className={`${ data.section > info.sections ? 'opacity-50' : '' } w-full bg-blue-500 hover:bg-blue-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
                 () => {
                     if (data.section <= info.sections) {
-                        window.location.href = '/kurse/' + kurs + '/' + data.section;
+                        if (data.section <= 0) {
+                            window.location.href = '/kurse/' + kurs + '/1';
+                        } else {
+                            window.location.href = '/kurse/' + kurs + '/' + data.section;
+                        }
                     }
                 }
             }>Kurs anzeigen</div>
@@ -67,6 +71,3 @@ export const Card = ({ kurs }) => {
     )
 
 }
-
-
-

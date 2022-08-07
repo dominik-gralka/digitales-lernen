@@ -4,7 +4,6 @@ import { MultipleChoiceQuiz } from "../../../components/quizset/mchoice"
 import { ProgressHandler } from "../../../components/progress-handler"
 
 import 'katex/dist/katex.min.css'
-import Latex from 'react-latex-next'
 
 export default function AufundAbleiten() {
     return (
