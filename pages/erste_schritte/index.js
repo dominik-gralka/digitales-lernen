@@ -64,7 +64,7 @@ export default function Home({ cookies }) {
                         <h2 className="text-3xl font-semibold pb-5">Du weißt nicht wo du anfangen sollst?</h2>
 
                         <div className="flex flex-col py-5 lg:w-1/2">
-                            <h3 className="text-xl font-medium">Probier's hiermit!</h3>
+                            <h3 className="text-xl font-medium">Probier&apos;s hiermit!</h3>
                         </div>
 
                         <Card kurs="einleitung" />
