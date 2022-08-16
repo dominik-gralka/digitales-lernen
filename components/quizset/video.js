@@ -16,7 +16,7 @@ export const VideoQuiz = ({ video, title, description }) => {
     const [watched, setWatched] = useState(false);
 
     return (
-        <div className="px-10 lg:px-32 min-h-screen">
+        <div className="px-7 lg:px-32 min-h-screen">
             <Navbar/>
             {/* Back Button */}
             <Link href="/">

@@ -17,7 +17,7 @@ export const MultipleChoiceQuiz = ({ question, options, answer, image }) => {
     const [selected, setSelected] = useState(-1);
 
     return (
-        <div className="px-10 lg:px-32 min-h-screen mb-20 lg:mb-0">
+        <div className="px-7 lg:px-32 min-h-screen mb-20 lg:mb-0">
             <Navbar />
             {/* Back Button */}
             <Link href="/">

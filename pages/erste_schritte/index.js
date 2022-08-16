@@ -12,7 +12,7 @@ export default function Home({ cookies }) {
     const router = useRouter();
 
     return (
-        <div className="px-10 lg:px-32 min-h-screen">
+        <div className="px-7 lg:px-32 min-h-screen">
             <Navbar />
 
             <CookieHandler />

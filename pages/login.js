@@ -25,7 +25,7 @@ export default function Login() {
   const error = router.query.error;
 
   return (
-    <div className="px-10 lg:px-32 min-h-screen">
+    <div className="px-7 lg:px-32 min-h-screen">
       <Navbar />
 
       {/* Show error message if there is one */}

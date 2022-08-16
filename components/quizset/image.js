@@ -14,7 +14,7 @@ export const ImageQuiz = ({ image, title, description }) => {
     const section = pathname.split("/")[3];
 
     return (
-        <div className="px-10 lg:px-32 min-h-screen">
+        <div className="px-7 lg:px-32 min-h-screen">
             <Navbar/>
             {/* Back Button */}
             <Link href="/">
