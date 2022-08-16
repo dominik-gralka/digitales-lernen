@@ -38,7 +38,7 @@ export const Card = ({ kurs }) => {
         <div className="w-full lg:w-1/4 border-2 rounded-md px-3 py-3 h-auto">
             <div>
                 <div className="overflow-hidden h-32 rounded-md flex justify-center items-center">
-                    <img src={ info.preview } alt="logo" className="w-full md:hover:bg-h-m_gray transition-all"/>
+                    <img src={ info.preview } alt="logo" className="w-full md:hover:bg-h-m_gray transition-all h-32 object-cover"/>
                 </div>
             </div>
             <div className="pb-5 pt-3">
