@@ -36,7 +36,7 @@ export const MultipleChoiceQuiz = ({ question, options, answer, image }) => {
 
                     { /* Multiple Choice with max. one value */}
 
-                    <form className="flex flex-col lg:gap-5 gap-2 pt-5 lg:flex-col lg:pt-5 w-full h-auto">
+                    <form className="flex flex-col lg:gap-5 gap-2 pt-5 lg:flex-col lg:pt-5 w-full h-96">
                         {options.map((option, index) => {
                             return (
                                 <div className="flex flex-row items-center justify-start w-full lg:w-auto bg-gray-50 p-2.5 border-2 border-gray-100 rounded-md h-auto" key={index} onClick={
