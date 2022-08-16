@@ -18,7 +18,7 @@ export const Card = ({ kurs }) => {
     if (!data) return (
         <div className="w-full lg:w-1/4 border-2 rounded-md px-3 py-3 h-auto">
             <div>
-                <div className="overflow-clip h-32 rounded-md flex justify-center items-center">
+                <div className="overflow-hidden h-32 rounded-md flex justify-center items-center">
                     <img src={ info.preview } alt="logo" className="w-full md:hover:bg-h-m_gray transition-all"/>
                 </div>
             </div>
@@ -37,7 +37,7 @@ export const Card = ({ kurs }) => {
     return (
         <div className="w-full lg:w-1/4 border-2 rounded-md px-3 py-3 h-auto">
             <div>
-                <div className="overflow-clip h-32 rounded-md flex justify-center items-center">
+                <div className="overflow-hidden h-32 rounded-md flex justify-center items-center">
                     <img src={ info.preview } alt="logo" className="w-full md:hover:bg-h-m_gray transition-all"/>
                 </div>
             </div>
@@ -56,7 +56,7 @@ export const Card = ({ kurs }) => {
                 <h2 className="text-xl font-bold">{ info.title }</h2>
                 <p className="text-sm">{ info.description }</p>
             </div>
-            <div className={`${ data.section > info.sections ? 'opacity-50' : '' } w-full bg-blue-500 hover:bg-blue-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
+            <div className={`${ data.section > info.sections ? 'hidden' : '' } w-full bg-blue-500 hover:bg-blue-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
                 () => {
                     if (data.section <= info.sections) {
                         if (data.section <= 0) {
@@ -67,6 +67,17 @@ export const Card = ({ kurs }) => {
                     }
                 }
             }>Kurs anzeigen</div>
+            <div className={`${ data.section > info.sections ? '' : 'hidden' } w-full bg-blue-500 hover:bg-blue-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
+                () => {
+                    if (data.section <= info.sections) {
+                        if (data.section <= 0) {
+                            window.location.href = '/kurse/' + kurs + '/1';
+                        } else {
+                            window.location.href = '/kurse/' + kurs + '/' + data.section;
+                        }
+                    }
+                }
+            }>Teste dein Wissen</div>
             <progress className="w-full h-1 bg-gray-300" value={ data.section - 1 } max={ info.sections }></progress>
         </div>
     )
