@@ -30,8 +30,8 @@ export const ImageQuiz = ({ image, title, description }) => {
                         section={ section }
                     />
                         <div className="text-left text-3xl font-semibold">{ title }</div>
-                        <div className="text-left text-md pt-3">
-                            <Latex>{ description }</Latex>
+                        <div className="text-justify text-md pt-3">
+                            <Latex >{ description }</Latex>
                         </div>
                     <Continue
                         kurs={ kurs }

@@ -35,10 +35,11 @@ export default function Home({ cookies }) {
 
           <div className="py-10">
             <h2 className="text-4xl font-medium pb-5">Alle Kurse</h2>
-            <h2 className="text-xl font-medium pb-5">Grundlagen</h2>
+            <h2 className="text-xl font-medium pb-5">Kapitel 1: Grundlagen der Integralrechnung</h2>
             <div className="flex flex-col lg:flex-row gap-10">
-              <Card kurs="basics" />
-              <Card kurs="ober-und-untersumme" />
+              <Card kurs="einleitung" />
+              <Card kurs="stammfunktion" />
+              <Card kurs="integrieren" />
             </div>
             <h2 className="text-xl font-medium py-5">Wiederholen</h2>
             <div className="flex flex-col lg:flex-row gap-10">

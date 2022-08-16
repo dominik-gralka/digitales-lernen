@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Overview } from './overview';
 import { parseCookies, setCookie, destroyCookie } from 'nookies'
+import { SectionSelect } from './section-select';
 import useSWR from 'swr'
 
 import { ExclamationIcon } from '@heroicons/react/solid'
@@ -28,7 +29,7 @@ export const Card = ({ kurs }) => {
                 <h2 className="text-xl font-bold">{ info.title }<ExclamationIcon className="inline ml-2 w-5 text-yellow-500"/></h2>
                 <p className="text-sm">{ info.description }</p>
             </div>
-            <div className={`opacity-70 w-full bg-gray-400 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer animate-pulse`}>Kurs anzeigen</div>
+            <SectionSelect/>
             <progress className="w-full h-1 bg-gray-300" value={ 0 } max={ info.sections }></progress>
         </div>
     )

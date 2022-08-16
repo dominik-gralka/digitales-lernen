@@ -5,15 +5,13 @@ import { ImageQuiz } from "../../../components/quizset/image";
 
 export default function Image() {
 
-    const lat1 = 'We give illustrations for the three processes $e^+e^-$, gluon-gluon and $\\gamma\\gamma \\to W t\\bar b$.'
-
     return (
         <>
         <ProgressHandler />
             <ImageQuiz
-                image="/images/ableiten/Wegfallen.png"
+                image="/images/ableiten/wegfallen.png"
                 title='Wegfallen von Zahlen'
-                description={'We give illustrations for the three processes $e^+e^-$, gluon-gluon and $\\gamma\\gamma \\to W t\\bar b$.'}
+                description={'Leiten wir eine Zahl ab, fällt eine alleinstehende Zahl in der letztendlichen Ableitung weg. Du kannst dir eine alleinstehende Zahl als z.B. $5x^0$ vorstellen. Multiplizieren wir den Exponenten 0 mit der 5 ergibt dieses Polynom immer 0. Somit fällt die Zahl weg.'}
             />
         </>
     )

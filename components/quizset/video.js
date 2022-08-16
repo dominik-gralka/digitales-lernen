@@ -34,7 +34,7 @@ export const VideoQuiz = ({ video, title, description }) => {
                         section={ section }
                     />
                     <div className="text-left text-3xl font-semibold">{ title }</div>
-                    <div className="text-left text-md pt-3">{ description }</div>
+                    <div className="text-justify text-md pt-3">{ description }</div>
                     <Continue
                         kurs={ kurs }
                         section={ section }

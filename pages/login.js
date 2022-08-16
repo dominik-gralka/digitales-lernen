@@ -30,9 +30,9 @@ export default function Login() {
         <div className="flex flex-col items-center lg:pt-10">
 
           <div className="pt-5 text-center flex flex-col items-center">
-            <img src="https://via.placeholder.com/400x400" alt="Welcome Image" className="pb-10" />
+            <img src="/send-invite.svg" alt="Welcome Image" className="pb-10" />
             <h1 className="text-4xl font-bold py-2">Willkommen,</h1>
-            <h2 className="text-lg pt-2 font-medium">bitte geben Sie Ihren 6-stelligen Anmeldecode ein.</h2>
+            <h2 className="text-lg pt-2 font-medium">bitte gebe deinen 6-stelligen Anmeldecode ein.</h2>
           </div>
 
           <form className="flex flex-col gap-4 pt-10 lg:w-1/4 w-full" onSubmit={(e) => {
@@ -42,8 +42,8 @@ export default function Login() {
             router.push('/')
           }
           }>
-            <input type="text" name="user" className="bg-slate-100 h-14 text-xl font-medium text-center rounded-lg" maxLength="6" minLength="6" placeholder="6-stelliger PIN" required />
-            <button type="submit" className="text-white bg-blue-500 h-14 text-xl font-medium text-center rounded-lg">Anmelden</button>
+            <input type="text" name="user" className="bg-slate-100 h-14 text-lg font-medium text-center rounded-lg" maxLength="6" minLength="6" placeholder="6-stelliger PIN" required />
+            <button type="submit" className="text-white bg-blue-500 text-lg h-14 font-medium text-center rounded-lg">Anmelden</button>
 
           </form>
 

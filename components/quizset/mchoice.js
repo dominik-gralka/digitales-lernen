@@ -53,7 +53,7 @@ export const MultipleChoiceQuiz = ({ question, options, answer, image }) => {
                                             setSelected(index)
                                         }
                                     } />
-                                    <label htmlFor={index} className="text-left text-md ml-2 pb-0.5 font-semibold">
+                                    <label htmlFor={index} className="text-justify text-md ml-2 pb-0.5 font-semibold">
                                         <Latex>{option}</Latex>
                                     </label>                         
                                 </div>

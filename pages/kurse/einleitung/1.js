@@ -7,11 +7,12 @@ import { VideoQuiz } from "../../../components/quizset/video";
 export default function Einleitungsvideo() {
     return (
         <>
+        <PenAndPaperModal />
         <ProgressHandler />
             <VideoQuiz
-                video="/videos/ableiten.mp4"
+                video="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
                 title="Einleitungsvideo"
-                description="Erfrische dein Wissen über das Ableiten von Funktionen."
+                description="In diesem Video lernst du alle Grundlagen der Integralrechnung kennen, die du in den folgenden Lektionen brauchen wirst."
             />
         </>
     )
