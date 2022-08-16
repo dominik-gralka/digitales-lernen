@@ -10,10 +10,17 @@ export default function handler(req, res) {
     client.connect(err => {
         const collection = client.db("digitl").collection(user_query);
 
-        // Find and return the newest document with type: "progress"
-        collection.find({ type: "progress" }).sort({ _id: -1 }).limit(1).toArray(function (err, result) {
+        // Find and return document with latest timestamp
+        collection.find({ type: "progress" }).sort({ timestamp: -1 }).limit(1).toArray(function(err, result) {
+
+            client.close();
+
             if (err) throw err;
-            res.status(200).json(result[0]);
+            if (result.length > 0) {
+                res.status(200).json(result[0]);
+            } else {
+                res.status(200).json({});
+            }
         });
 
     });

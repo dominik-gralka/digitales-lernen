@@ -16,7 +16,8 @@ export default function handler(req, res) {
         const newDoc = {
             type: "progress",
             kurs: kurs_query,
-            section: section_query
+            section: section_query,
+            timestamp: new Date()
         }
         
         // Find latest document and replace

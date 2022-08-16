@@ -21,9 +21,19 @@ export default function Login() {
 
   const router = useRouter();
 
+  // Get error query from router
+  const error = router.query.error;
+
   return (
     <div className="px-10 lg:px-32 min-h-screen">
       <Navbar />
+
+      {/* Show error message if there is one */}
+      {error == "user_not_found" ? (
+            <div className="bg-red-500 text-red-500 font-semibold rounded-lg text-center py-4 bg-opacity-10">
+              <p className='p-2'>Benutzer nicht gefunden - Bitte überprüfe deinen Anmeldecode.</p>
+            </div>
+          ) : null}
 
       <main>
 
@@ -39,7 +49,7 @@ export default function Login() {
             handleCookies(e.target.user.value)
             // Redirect to / and reload
             e.preventDefault()
-            router.push('/')
+            router.push('/api/verify_pin?user=' + e.target.user.value)
           }
           }>
             <input type="text" name="user" className="bg-slate-100 h-14 text-lg font-medium text-center rounded-lg" maxLength="6" minLength="6" placeholder="6-stelliger PIN" required />
