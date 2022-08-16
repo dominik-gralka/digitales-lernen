@@ -35,8 +35,8 @@ export default function Home({ cookies }) {
                         <h2 className="text-3xl font-semibold pb-5">Häufig gestelle Fragen</h2>
 
                         <div className="flex flex-col border-b-2 mt-5 py-5 lg:w-1/2">
-                            <h3 className="text-xl font-semibold pb-5">Was ist "Digitales Lernen"?</h3>
-                            <p className="text-base">Wie der Name schon verrät, ist "Digitales Lernen" eine Online-Plattform um das Potenzial von neuen Medien in einer konstruktiven Lernumgebung zu erforschen. <br/> Dieses Projekt entsteht als besondere Lernleistung für das Abitur 2023 und soll die Frage beantworten, inwiefern Schüler*innen von digitalen Medien als Ergänzung zum Schulunterricht profitieren können.</p>
+                            <h3 className="text-xl font-semibold pb-5">Was ist &quot;Digitales Lernen&quot;?</h3>
+                            <p className="text-base">Wie der Name schon verrät, ist &quot;Digitales Lernen&quot; eine Online-Plattform um das Potenzial von neuen Medien in einer konstruktiven Lernumgebung zu erforschen. <br/> Dieses Projekt entsteht als besondere Lernleistung für das Abitur 2023 und soll die Frage beantworten, inwiefern Schüler*innen von digitalen Medien als Ergänzung zum Schulunterricht profitieren können.</p>
                         </div>
 
                         <div className="flex flex-col border-b-2 mt-5 py-5 lg:w-1/2">
@@ -46,7 +46,7 @@ export default function Home({ cookies }) {
 
                         <div className="flex flex-col border-b-2 mt-5 py-5 lg:w-1/2">
                             <h3 className="text-xl font-semibold pb-5">Habe ich eine Zeitbegrenzung?</h3>
-                            <p className="text-base">Du hast keine zeitlichen Limitierungen. Nimm’ dir also gerne auch mal Zeit um ein Themengebiet zu wiederholen oder es zu vertiefen</p>
+                            <p className="text-base">Du hast keine zeitlichen Limitierungen. Nimm&apos; dir also gerne auch mal Zeit um ein Themengebiet zu wiederholen oder es zu vertiefen</p>
                         </div>
 
                         <div className="flex flex-col border-b-2 mt-5 py-5 lg:w-1/2">
