@@ -22,7 +22,7 @@ export const Card = ({ kurs }) => {
         <div className="w-full lg:w-1/4 border-2 rounded-md px-3 py-3 h-auto">
             <div>
                 <div className="overflow-hidden h-32 rounded-md flex justify-center items-center">
-                    <img src={info.preview} alt="logo" className="w-full md:hover:bg-h-m_gray transition-all" />
+                    <img src={info.preview} alt="logo" className="w-full md:hover:bg-h-m_gray transition-all h-32 object-cover" />
                 </div>
             </div>
             <div className="pb-5 pt-3">
@@ -32,6 +32,7 @@ export const Card = ({ kurs }) => {
                 <h2 className="text-xl font-bold">{info.title}<ExclamationIcon className="inline ml-2 w-5 text-yellow-500" /></h2>
                 <p className="text-sm">{info.description}</p>
             </div>
+            <div className={`w-full opacity-50 animate-pulse bg-gray-500 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`}>Kurs anzeigen</div>
             <progress className="w-full h-1 bg-gray-300" value={0} max={info.sections}></progress>
         </div>
     )
