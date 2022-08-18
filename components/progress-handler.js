@@ -11,6 +11,12 @@ export const ProgressHandler = () => {
     const section = pathname.split("/")[3];
     const client = parseCookies().fromClient;
 
+    if (!client) {
+        useEffect(() => {
+            router.push('/login?error=no_user')
+        } , [])
+    }
+
     useEffect(() => {
         const fetchData = async () => {
           const { data } = await axios.get('/api/update_progress?user=' + client + '&kurs=' + kurs + '&section=' + section);
