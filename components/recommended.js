@@ -10,8 +10,9 @@ export const Recommended = ({ client }) => {
 
     if (!data) return (
         <div>
-            <div className="pb-5">
+            <div className="pb-5 flex flex-row gap-3">
             <a className="bg-emerald-200 p-2 rounded-md font-medium text-sm">Vorgeschlagen</a>
+            <a className="bg-red-200 p-2 rounded-md font-medium text-sm">Verbindung wird aufgebaut...</a>
             </div>
             <div className="w-full lg:w-1/4 border-2 rounded-md px-3 py-3 h-auto animate-pulse">
                 <div>
