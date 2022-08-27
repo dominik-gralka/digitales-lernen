@@ -67,7 +67,7 @@ export async function getServerSideProps(context) {
     const client = cookies.fromClient;
 
     // Make api call to api/exportData
-    const res = await fetch('/api/exportData?user=' + client, {
+    const res = await fetch(process.env.BASE_URL + '/api/exportData?user=' + client, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
