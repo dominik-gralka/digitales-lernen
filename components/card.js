@@ -78,13 +78,7 @@ export const Card = ({ kurs }) => {
             <div className={`${data.section > info.sections ? '' : 'hidden'} flex flex-row`}>
                 <div className={` w-full bg-emerald-500 hover:bg-emerald-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
                     () => {
-                        if (data.section <= info.sections) {
-                            if (data.section <= 0) {
-                                window.location.href = '/kurse/' + kurs + '/1';
-                            } else {
-                                window.location.href = '/kurse/' + kurs + '/' + data.section;
-                            }
-                        }
+                        window.location.href = '/kurse/' + kurs + '/evaluation';
                     }
                 }>Teste dein Wissen</div>
                 <div className='flex justify-center border-2 w-16 hover:bg-gray-50 bg-white transition-all text-center text-gray-400 font-bold py-3 rounded-lg cursor-pointer ml-3' onClick={() => setSection(true)}>

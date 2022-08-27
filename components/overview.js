@@ -1,7 +1,7 @@
 export const Overview = {
     "ableiten": {
         "title": "Ableiten",
-        "description": "Erfrische dein Wissen über das Ableiten",
+        "description": "Erfrische dein Wissen über das Ableiten um deinen Start in das Semster zu erleichtern.",
         "sections": 3,
         "preview": "/thumbnails/ableiten.png"
     },

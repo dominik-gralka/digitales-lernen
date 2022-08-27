@@ -11,7 +11,9 @@
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "axios": "^0.27.2",
+    "file-saver": "^2.0.5",
     "framer-motion": "^6.5.1",
+    "jszip": "^3.10.1",
     "katex": "^0.16.0",
     "mongodb": "^4.8.1",
     "next": "12.2.3",

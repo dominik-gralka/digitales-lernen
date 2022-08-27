@@ -9,8 +9,8 @@ export const Continue = ({ kurs, section, enabled }) => {
 
     return (
         <>
-            { parseInt(section) == parseInt(info.sections) ?
-                <div className="absolute inset-x-0 bottom-7 mx-10 lg:mx-0 lg:bottom-0 lg:relative lg:w-full mt-auto">
+            { parseInt(section) > parseInt(info.sections) ?
+                <div className="fixed inset-x-0 bottom-7 mx-10 lg:mx-0 lg:bottom-0 lg:relative lg:w-full mt-auto">
                     <div className="w-auto bg-emerald-500 hover:bg-emerald-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer">Teste dein Wissen</div>
                     <ProgressBar
                         kurs={ kurs }
@@ -18,7 +18,7 @@ export const Continue = ({ kurs, section, enabled }) => {
                     />
                 </div>
                 :
-                <div className="fixed inset-x-0 bottom-7 mx-10 lg:mx-0 lg:bottom-0 lg:relative lg:w-full mt-auto">
+                <div className="fixed inset-x-0 bottom-0 pb-7 lg:pb-0 px-10 lg:px-0 lg:bottom-0 lg:relative lg:w-full mt-auto bg-white">
                     <div className="flex flex-row w-full">
                         <Link href={ "/kurse/" + kurs + "/" + (parseInt(section) - 1) }>
                             <div className={` ${ section > 1 ? '' : 'hidden' } border-2 w-16 hover:bg-gray-50 bg-white transition-all text-center text-gray-400 font-bold py-3 rounded-lg cursor-pointer mr-3`}>←</div>

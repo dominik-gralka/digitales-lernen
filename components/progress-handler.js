@@ -20,7 +20,6 @@ export const ProgressHandler = () => {
     useEffect(() => {
         const fetchData = async () => {
           const { data } = await axios.get('/api/update_progress?user=' + client + '&kurs=' + kurs + '&section=' + section);
-          // ... do something with data like setData
           console.log(data)
         };
         fetchData();

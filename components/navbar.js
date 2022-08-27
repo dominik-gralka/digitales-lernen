@@ -59,9 +59,9 @@ export const Navbar = () => {
               </a>
             </Link>
 
-            <Link href='/logout'>
-              <a className='lg:inline-flex lg:w-auto w-full sm:mx-10 py-2 font-medium rounded text-black items-center justify-center hover:text-h-gray transition-all'>
-                Ausloggen
+            <Link href='/konto'>
+              <a className='lg:inline-flex lg:w-auto w-full sm:mx-10 py-2 font-medium lg:font-base lg:text-lg rounded-lg text-black items-center justify-center hover:text-h-gray transition-all lg:bg-blue-500 lg:px-5 lg:text-white lg:hover:bg-blue-600'>
+                Mein Konto
               </a>
             </Link>
 

@@ -7,6 +7,8 @@ function handleCookies(user) {
   // Set
   setCookie(null, "fromClient", user, {
     path: "/",
+    // Expires in 1 month
+    expires: new Date(Date.now() + 2592000000),
   });
 
   // Destroy

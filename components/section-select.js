@@ -9,7 +9,7 @@ export const SectionSelect = ({ kurs, code}) => {
     const buttons = [];
     for (let i = 1; i <= sections; i++) {
         buttons.push(
-            <button key={i} className="bg-blue-500 p-2 h-14 w-14 rounded-lg text-white font-semibold" onClick={() => {
+            <button key={i} className="bg-blue-500 hover:bg-blue-600 transition-all p-2 h-14 w-14 rounded-lg text-white font-semibold" onClick={() => {
                 window.location.href = "/kurse/" + kurs + "/" + i;
             } }>
                 {i}
@@ -23,12 +23,12 @@ export const SectionSelect = ({ kurs, code}) => {
                 <div className='lg:w-1/4 w-11/12 h-64 mb-5 rounded-md bg-white flex flex-col'>
                     <div className="flex flex-row w-full justify-between">
                         <h2 className="p-5 text-2xl font-semibold">Lektionsauswahl</h2>
-                        <XCircleIcon className="text-gray-300 w-8 m-5" />
+                        <XCircleIcon className="text-gray-300 w-8 m-5 hover:text-gray-400 transition-all" />
                     </div>
                     <p className="px-5 text-lg">Wähle eine der folgenden Lektionen, an der du weiterarbeiten möchtest.</p>
                     
                     {/* Create as many numbered buttons next to each other as sections */}
-                    <div className="justify-center pt-7 flex flex-row gap-10">
+                    <div className="justify-around pt-7 flex flex-row px-5 gap-2">
                         {buttons}
                     </div>
 

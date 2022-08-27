@@ -19,3 +19,30 @@ a {
   font-family: 'Plus Jakarta Sans', sans-serif;
   box-sizing: border-box;
 }
+
+.svg-pi-wrapper {
+  position: relative;
+}
+
+.svg-pi {
+  transform: rotate(-90deg); /* Fix the orientation */
+}
+
+/* Animated spinner version */
+.svg-pi-indicator--spinner {
+  animation: spinner .75s linear infinite;
+  transform-origin: center;
+}
+
+.svg-pi-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.svg-pi-label__loading {
+  opacity: .5;
+  font-size: 0.75em;
+}
