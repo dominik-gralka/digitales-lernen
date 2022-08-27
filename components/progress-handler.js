@@ -12,9 +12,7 @@ export const ProgressHandler = () => {
     const client = parseCookies().fromClient;
 
     if (!client) {
-        useEffect(() => {
-            router.push('/login?error=no_user')
-        } , [])
+        window.location.href = '/login?error=no_user';
     }
 
     useEffect(() => {

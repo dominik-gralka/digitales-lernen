@@ -42,7 +42,7 @@ export default function Home({data}) {
 
                 <div className="pt-10">
                     <p className="text-lg font-medium pb-2 lg:w-1/2">Mit dem Stellen dieser verbindlichen Anfrage, bekommst du innerhalb kürzester Zeit eine Auskunft über alle für dieses Konto relevante gespeicherten Daten.</p>
-                    <p className="text-lg font-medium pb-2 lg:w-1/2">"Digitales Lernen" speichert nach europäischem Recht und Bundesdatenschutzgesetz (BDSG) keine personenbezogenen Daten, die auf eine natürliche Person beziehbar sind und so Rückschlüsse auf deren Persönlichkeit erlauben.</p>
+                    <p className="text-lg font-medium pb-2 lg:w-1/2">&quot;Digitales Lernen&quot; speichert nach europäischem Recht und Bundesdatenschutzgesetz (BDSG) keine personenbezogenen Daten, die auf eine natürliche Person beziehbar sind und so Rückschlüsse auf deren Persönlichkeit erlauben.</p>
                     <Link href="https://www.datenschutz.org/personenbezogene-daten/">
                         <a className="text-lg font-medium pb-2 lg:w-1/2 underline text-blue-400">Mehr Erfahren <ExternalLinkIcon className="w-4 inline"/></a>
                     </Link>

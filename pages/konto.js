@@ -73,7 +73,7 @@ export default function Konto() {
                                 <p className="text-6xl font-bold py-5 transition-all cursor-default text-green-500">{data.percentage}%</p>
                             </div>
                             <span className='text-gray-400'>
-                                {data < 100 ? 'Gut gemacht. Weiter so!' : 'Du hast alle Kurse abgeschlossen.'}
+                                {data !== 100 ? 'Gut gemacht. Weiter so!' : 'Du hast alle Kurse abgeschlossen.'}
                             </span>
 
                         </div>
@@ -96,7 +96,6 @@ export default function Konto() {
                 <div className="rounded-lg">
                     <p className="text-3xl font-semibold mb-10">Konto-Verwaltung</p>
                     <div className="flex flex-col lg:flex-row lg:gap-5">
-                        {/* Abmelden */}
 
                         <Link href="/account/exportData">
                             <a className="bg-emerald-500 hover:bg-emerald-600 transition-all p-3 px-5 flex justify-center text-white rounded-md font-lg text-sm mb-5">Meine Daten exportieren</a>
