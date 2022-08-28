@@ -15,6 +15,12 @@ export const ProgressText = ({ kurs, section }) => {
         )
     }
 
+    if (section == "evaluation") {
+        return (
+            <span className="text-sm pb-2">{info.title} · Evaluation</span>
+        )
+    }
+
     return (
         <div className="pb-2" onClick={ () => setVisible(!visible)}>
             <div className={visible ? '' : 'hidden'}><SectionSelect kurs={ kurs }/></div>
