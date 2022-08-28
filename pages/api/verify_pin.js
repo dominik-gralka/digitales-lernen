@@ -19,6 +19,16 @@ export default function handler(req, res) {
             } else {
                 const collection = db.collection(user_query);
 
+                // Check if there is a document with type: termination
+                collection.find({ type: "termination" }).toArray(function (err, result) {
+                    if (err) throw err;
+                    if (result.length > 0) {
+                        res.setHeader('Set-Cookie', 'fromClient=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT;');
+                        res.status(200).redirect('/login?error=terminated');
+                        return;
+                    }
+                });
+
                 // Check if there is more than one entry in the collection
                 collection.countDocuments(function (err, count) {
                     if (err) throw err;

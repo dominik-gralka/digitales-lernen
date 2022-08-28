@@ -22,14 +22,23 @@ export default async function handler(req, res) {
 
         if (fromClient == user_query) {
             const result = await collection.deleteMany({});
-            // Redirect with status 200 and delete fromClient cookie
-            res.setHeader('Set-Cookie', 'fromClient=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT;');
-            res.status(200).redirect('/account/terminateAccount?status=success&user=' + user_query);
+
+            // Create document with type: termination
+            const termination = {
+                type: "termination",
+                timestamp: new Date().toISOString(),
+            }
+            
+            const result2 = await collection.insertOne(termination).then(() => {
+                // Redirect with status 200 and delete fromClient cookie
+                res.setHeader('Set-Cookie', 'fromClient=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT;');
+                res.status(200).redirect('/account/terminateAccount?status=success&user=' + user_query);
+            });
         }
 
         conn.close();
 
-    } catch(e) {
+    } catch (e) {
         console.log(e)
         res.status(500).json({ error: e.message });
     }

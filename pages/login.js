@@ -52,6 +52,14 @@ export default function Login() {
         </div>
       ) : null}
 
+      {error == "terminated" ? (
+        <div className="bg-red-500 text-red-500 font-semibold rounded-lg text-center py-4 bg-opacity-10">
+          <p className="p-2">
+            Benutzerkonto gekündigt - Du hast keinen Zugriff auf diese Plattform.
+          </p>
+        </div>
+      ) : null}
+
       <main>
         <div className="flex flex-col items-center lg:pt-10">
           <div className="pt-5 text-center flex flex-col items-center">
@@ -77,7 +85,7 @@ export default function Login() {
               className="bg-slate-100 h-14 text-lg font-medium text-center rounded-lg"
               maxLength="6"
               minLength="6"
-              placeholder="6-stelliger PIN"
+              placeholder="6-stellige PIN"
               required
             />
             <button
