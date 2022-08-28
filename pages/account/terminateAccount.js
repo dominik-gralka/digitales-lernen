@@ -4,10 +4,11 @@ import Link from 'next/link'
 import { parseCookies, setCookie, destroyCookie } from 'nookies'
 
 import { useState } from 'react'
+import { Loading } from '../../components/loading'
 
 import { Navbar } from '../../components/navbar'
 
-export default function Home({ data }) {
+export default function Home() {
 
     const cookies = parseCookies();
     const client = cookies.fromClient;

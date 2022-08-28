@@ -1,11 +1,4 @@
-import Head from 'next/head'
-import { Card } from '../components/card'
-import { parseCookies, setCookie, destroyCookie } from 'nookies'
-
 import { Navbar } from '../components/navbar'
-import { CookieHandler } from '../components/cookie-handler'
-
-import { useRouter } from 'next/router'
 
 export const Loading = () => {
 

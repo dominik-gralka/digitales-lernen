@@ -4,17 +4,20 @@ import Link from 'next/link'
 import { parseCookies, setCookie, destroyCookie } from 'nookies'
 
 import { Navbar } from '../../components/navbar'
-import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
+import { Loading } from '../../components/loading'
+import useSWR from 'swr'
 
-const zip = new JSZip();
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
-export default function Home({data}) {
+export default function Home() {
 
     const cookies = parseCookies();
     const client = cookies.fromClient;
 
-    function generateZip(data) {
+    const { data, error } = useSWR('/api/exportData?user=' + client, fetcher);
+
+    function generateZip() {
         let buffer = Buffer.from(data.content, 'base64');
         const blob = new Blob([buffer]);
 
@@ -23,6 +26,10 @@ export default function Home({data}) {
 
         saveAs(blob, filename);
         
+    }
+
+    if (!data) {
+        return <Loading />
     }
 
     return (
@@ -49,7 +56,7 @@ export default function Home({data}) {
                 </div>
 
                 <div>
-                    <a className={`${ !client ? 'opacity-50' : 'hover:bg-emerald-600'} lg:w-64 w-full mt-10 bg-emerald-500 transition-all p-3 px-5 flex justify-center text-white rounded-md font-lg text-md mb-5 cursor-pointer`} onClick={() => generateZip(data)}>Datenpaket anfordern</a>
+                    <a className={`${ !client ? 'opacity-50' : 'hover:bg-emerald-600'} lg:w-64 w-full mt-10 bg-emerald-500 transition-all p-3 px-5 flex justify-center text-white rounded-md font-lg text-md mb-5 cursor-pointer`} onClick={() => generateZip()}>Datenpaket anfordern</a>
                     <span className={ !client ? '' : 'hidden'}>Du musst angemeldet sein, um ein Datenpaket anfordern zu können.</span>
                 </div>
 
@@ -57,30 +64,4 @@ export default function Home({data}) {
 
         </div>
     )
-}
-
-// Get Serverside Props
-export async function getServerSideProps(context) {
-
-    // Get Cookies
-    const cookies = parseCookies(context);
-    const client = cookies.fromClient;
-
-    // Make api call to api/exportData
-    const res = await fetch(process.env.BASE_URL + '/api/exportData?user=' + client, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        credentials: 'include'
-    })
-    const data = await res.json()
-
-    // Return data
-    return {
-        props: {
-            data
-        }
-    }
 }

@@ -65,7 +65,7 @@ export default function Konto() {
                             <p className="text-2xl font-semibold pb-2">Mein Fortschritt</p>
                             <div className="flex">
                                 <div className='flex justify-center items-center pr-3'>
-                                    <svg className="w-20 h-20">
+                                    <svg className="w-20 h-20 -rotate-90">
                                         <circle className="text-gray-300" strokeWidth="8" stroke="currentColor" fill="transparent" r="30" cx="40" cy="40"></circle>
                                         <circle className="text-green-500" strokeWidth="8" stroke="currentColor" fill="transparent" strokeLinecap="round" r="30" cx="40" cy="40" strokeDasharray={circumference} strokeDashoffset={circumference - data.percentage / 100 * circumference}></circle>
                                     </svg>
