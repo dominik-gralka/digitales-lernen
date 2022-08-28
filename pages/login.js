@@ -3,6 +3,8 @@ import { Navbar } from "../components/navbar";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
+import Head from 'next/head'
+
 function handleCookies(user) {
   // Set
   setCookie(null, "fromClient", user, {
@@ -26,6 +28,12 @@ export default function Login() {
   return (
     <div className="px-7 lg:px-32 min-h-screen">
       <Navbar />
+
+      <Head>
+        <title>Digitales Lernen</title>
+        <meta name="description" content="Digitales Lernen an der Stadtteilschule Meiendorf" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
       {/* Show error message if there is one */}
       {error == "user_not_found" ? (
