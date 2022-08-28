@@ -22,7 +22,7 @@ export default async function handler(req, res) {
         // Get all documents
         const cursor = await collection.find();
         const data = await cursor.toArray();
-        
+
         //Get all different type of documents
         const types = [...new Set(data.map(item => item.type))];
 
@@ -34,7 +34,9 @@ export default async function handler(req, res) {
             for (let j = 0; j < data.length; j++) {
                 const doc = data[j];
                 if (doc.type == type) {
-                    folder.file(doc.timestamp + ".json", JSON.stringify(doc));
+                    // 6 digit random id (if timestamps are the same)
+                    const id = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+                    folder.file("(" + id + ") " + doc.timestamp + ".json", JSON.stringify(doc));
                 }
             }
         }
