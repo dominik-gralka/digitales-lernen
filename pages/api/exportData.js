@@ -34,8 +34,8 @@ export default async function handler(req, res) {
             for (let j = 0; j < data.length; j++) {
                 const doc = data[j];
                 if (doc.type == type) {
-                    // 6 digit random id (if timestamps are the same)
-                    const id = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+                    // Get last 4 digits of _id and remove last 2 digits
+                    const id = doc._id.toString().slice(-4);
                     folder.file("(" + id + ") " + doc.timestamp + ".json", JSON.stringify(doc));
                 }
             }
