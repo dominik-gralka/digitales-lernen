@@ -5,6 +5,7 @@ import { ProgressText } from "../progresstext"
 import { CheckAndContinue } from "../check-button"
 import { useState } from "react"
 import Latex from "react-latex-next"
+import Head from "next/head"
 
 export const MultipleChoiceQuiz = ({ question, options, answer, image }) => {
     // Video, Text, Description and Continue Button
@@ -19,6 +20,13 @@ export const MultipleChoiceQuiz = ({ question, options, answer, image }) => {
     return (
         <div className="px-7 lg:px-32 min-h-screen mb-32 lg:mb-0">
             <Navbar />
+
+            <Head>
+                <title>Digitales Lernen</title>
+                <meta name="description" content="Digitales Lernen an der Stadtteilschule Meiendorf" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+
             {/* Back Button */}
             <Link href="/">
                 <div className="lg:my-10 mb-5 cursor-pointer lg:text-sm font-semibold">← Zurück zur Kursübersicht</div>
@@ -55,7 +63,7 @@ export const MultipleChoiceQuiz = ({ question, options, answer, image }) => {
                                     } />
                                     <label htmlFor={index} className="text-justify text-md ml-2 pb-0.5 font-semibold">
                                         <Latex>{option}</Latex>
-                                    </label>                         
+                                    </label>
                                 </div>
                             )
                         }
