@@ -20,9 +20,9 @@ export const IndexHandler = () => {
             {
                 /* Redirect to /1 if cookie is set */
                 client ? useEffect(() => {
-                    router.push(`/kurse/${kurs}/evaluation/1`)
+                    window.location.href = `/kurse/${kurs}/evaluation/1`
                 }) : useEffect(() => {
-                    router.push(`/login?error=no_user`)
+                    window.location.href = `/login?error=no_user`
                 })
             }
         </>

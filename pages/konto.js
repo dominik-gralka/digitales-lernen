@@ -60,7 +60,16 @@ export default function Konto() {
                     </div>
 
                     <div className="lg:mt-10 w-full border-2 rounded-xl p-2 pl-5">
+                        <div className="py-5">
+                            <p className="text-2xl font-semibold pb-2">Konto-Status</p>
+                            <div>
+                                <p className="text-6xl font-bold py-5 transition-all cursor-default text-green-500">Gruppe A</p>
+                                <span className='text-gray-400'>Du kannst an allen Kursen und Tests teilnehmen.</span>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div className="lg:mt-10 w-full border-2 rounded-xl p-2 pl-5">
                         <div className="py-5">
                             <p className="text-2xl font-semibold pb-2">Mein Fortschritt</p>
                             <div className="flex">
@@ -75,7 +84,6 @@ export default function Konto() {
                             <span className='text-gray-400'>
                                 {data !== 100 ? 'Gut gemacht. Weiter so!' : 'Du hast alle Kurse abgeschlossen.'}
                             </span>
-
                         </div>
                     </div>
 

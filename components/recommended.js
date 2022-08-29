@@ -14,7 +14,7 @@ export const Recommended = ({ client }) => {
             <a className="bg-emerald-200 p-2 rounded-md font-medium text-sm">Vorgeschlagen</a>
             <a className="bg-red-200 p-2 rounded-md font-medium text-sm">Verbindung wird aufgebaut...</a>
             </div>
-            <div className="w-full lg:w-1/4 border-2 rounded-md px-3 py-3 h-auto animate-pulse">
+            <div className="w-full 2xl:w-1/4 lg:w-96 border-2 rounded-md px-3 py-3 h-auto animate-pulse">
                 <div>
                     <div className="overflow-clip h-32 rounded-md">
                         <div className="w-full md:hover:bg-h-m_gray transition-all h-full bg-gray-200">&nbsp;</div>

@@ -14,12 +14,15 @@ export const Card = ({ kurs }) => {
 
     const info = Overview[kurs];
     const cookies = parseCookies();
+    const bypass = cookies.bypassRestriction;
+    const enabled = info.enabled
+
     const [section, setSection] = useState(false);
 
     const { data, error } = useSWR('/api/get_kurs_progress?user=' + cookies.fromClient + '&kurs=' + kurs, fetcher);
 
     if (!data) return (
-        <div className="w-full lg:w-1/4 border-2 rounded-md px-3 py-3 h-auto">
+        <div className="w-full 2xl:w-1/4 lg:w-96  border-2 rounded-md px-3 py-3 h-auto">
             <div>
                 <div className="overflow-hidden h-32 rounded-md flex justify-center items-center">
                     <img src={info.preview} alt="logo" className="w-full md:hover:bg-h-m_gray transition-all h-32 object-cover" />
@@ -37,8 +40,32 @@ export const Card = ({ kurs }) => {
         </div>
     )
 
+    if (!enabled && !bypass) {
+        return (
+            <div className="w-full 2xl:w-1/4 lg:w-96 border-2 rounded-md px-3 py-3 h-auto">
+
+            <div>
+                <div className="overflow-hidden h-32 rounded-md flex justify-center items-center">
+                    <img src={info.preview} alt="logo" className="w-full md:hover:bg-h-m_gray transition-all h-32 object-cover" />
+                </div>
+            </div>
+            <div className="pb-5 pt-3">
+                <div className="text-xs font-medium pb-2">
+                    <span className="text-red-500">
+                            { info.available_from ? `Verfügbar ab ${info.available_from}` : "Aktuell nicht verfügbar" }
+                    </span>
+                </div>
+                <h2 className="text-xl font-bold">{info.title}</h2>
+                <p className="text-sm">{info.description}</p>
+            </div>
+            <div className={`w-full opacity-50 animate-pulse bg-gray-500 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`}>Kurs anzeigen</div>
+            <progress className="w-full h-1 bg-gray-300" value={data.section - 1} max={info.sections}></progress>
+        </div>
+        )
+    }
+
     return (
-        <div className="w-full lg:w-1/4 border-2 rounded-md px-3 py-3 h-auto">
+        <div className="w-full 2xl:w-1/4 lg:w-96  border-2 rounded-md px-3 py-3 h-auto">
             
             <div className={`${section ? '' : 'hidden'}`} onClick={() => setSection(false)}>
                 <SectionSelect kurs={ kurs }/>
