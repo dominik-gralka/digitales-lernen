@@ -20,8 +20,10 @@ export default function Home({ cookies }) {
     return <Loading/>
   }
 
-  if (data.latency > 1) {
-    return <SlowConnection/>
+  if (data.latency > 10000) {
+    if (!cookies.slowConnection) {
+      return <SlowConnection/>
+    }
   } 
 
   return (
