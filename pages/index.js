@@ -1,13 +1,28 @@
 import Head from 'next/head'
 import { Card } from '../components/card'
 import { parseCookies, setCookie, destroyCookie } from 'nookies'
+import useSWR from 'swr'
 
 import { Navbar } from '../components/navbar'
 import { CookieHandler } from '../components/cookie-handler'
+import { Loading } from '../components/loading'
 
 import { Recommended } from '../components/recommended'
+import SlowConnection from '../components/slow-connection-warning'
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 export default function Home({ cookies }) {
+
+  const { data, error } = useSWR('/api/ping', fetcher);
+
+  if (!data) {
+    return <Loading/>
+  }
+
+  if (data.latency > 1) {
+    return <SlowConnection/>
+  } 
 
   return (
     <div className="px-7 lg:px-32 min-h-screen">

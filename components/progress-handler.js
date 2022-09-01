@@ -15,7 +15,7 @@ export const ProgressHandler = () => {
     const client = parseCookies().fromClient;
     const bypass = parseCookies().bypassRestriction;
 
-    const enabled = Overview[kurs].kurs;
+    const enabled = Overview[kurs].enabled;
 
     if (!client) {
         if (typeof window !== 'undefined') {
@@ -33,7 +33,6 @@ export const ProgressHandler = () => {
 
         const fetchData = async () => {
           const { data } = await axios.get('/api/update_progress?user=' + client + '&kurs=' + kurs + '&section=' + section);
-          console.log(data)
         };
         fetchData();
         }
