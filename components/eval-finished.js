@@ -71,7 +71,7 @@ export const FinishedEval = () => {
 
             <div className="flex gap-5 flex-col-reverse lg:flex-row-reverse pt-10">
             {section_results.map((item) => (
-                <div className="flex flex-col gap-5 lg:gap-10 w-full h-20">
+                <div className="flex flex-col gap-5 lg:gap-10 w-full h-20" key={item}>
                     <h2 className="text-lg font-semibold">Frage {item.section}</h2>
                     <div className={`${ item.correct ? 'bg-green-400' : 'bg-red-400'} w-full rounded-lg h-3`}>&nbsp;</div>
                 </div>
