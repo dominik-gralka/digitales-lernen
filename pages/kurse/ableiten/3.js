@@ -9,9 +9,9 @@ export default function Image() {
         <>
         <ProgressHandler />
             <ImageQuiz
-                image="/images/ableiten/wegfallen.png"
-                title='Wegfallen von Zahlen'
-                description={'Leiten wir eine Zahl ab, fällt eine alleinstehende Zahl in der letztendlichen Ableitung weg. Du kannst dir eine alleinstehende Zahl als z.B. $5x^0$ vorstellen. Multiplizieren wir den Exponenten 0 mit der 5 ergibt dieses Polynom immer 0. Somit fällt die Zahl weg.'}
+                image="/images/ableiten/trigonometrisch.png"
+                title='Ableiten von trigonometrischen Funktionen'
+                description={'Sinus- und Cosinus lassen sich ganz einfach anhand eines Kreislaufes ableiten, der sich unendlich wiederholt. Aus $sin(x)$ wird somit abgeleitet $cos(x)$ und aus $-cos(x)$ wird abgeleitet wieder $sin(x)$. Umgekehrt wird z.B. aus $-sin(x)$ in der Stammfunktion wieder $cos(x)$.'}
             />
         </>
     )

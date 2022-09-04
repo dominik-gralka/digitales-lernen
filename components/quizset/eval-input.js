@@ -7,6 +7,7 @@ import { useState } from "react"
 import Latex from "react-latex-next"
 import Head from "next/head"
 import { ContinueEval } from "../eval-continue-button"
+import { IndexHandler } from "../eval-index-handler"
 
 export const InputEval = ({ question, answer, image }) => {
     // Video, Text, Description and Continue Button
@@ -30,6 +31,8 @@ export const InputEval = ({ question, answer, image }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
+            <IndexHandler/>
+
             {/* Back Button */}
             <Link href="/">
                 <div className="lg:my-10 mb-5 cursor-pointer lg:text-sm font-semibold">← Zurück zur Kursübersicht</div>
@@ -43,7 +46,9 @@ export const InputEval = ({ question, answer, image }) => {
                         <span className="bg-blue-200 p-1 rounded-md text-blue-600 font-medium">Evaluation</span>
                         <span className="ml-2">Keine Zeitbegrenzung</span>
                     </span>
-                    <div className="text-left text-3xl font-semibold">{question}</div>
+                    <div className="text-left text-3xl font-semibold">
+                        <Latex>{question}</Latex>
+                    </div>
 
                     { /* Multiple Choice with max. one value */}
 

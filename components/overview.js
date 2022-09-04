@@ -2,7 +2,8 @@ export const Overview = {
     "ableiten": {
         "title": "Ableiten",
         "description": "Erfrische dein Wissen über das Ableiten um deinen Start in das Semster zu erleichtern.",
-        "sections": 3,
+        "sections": 4,
+        "eval_sections": 5,
         "preview": "/thumbnails/ableiten.png",
         "enabled": true,
     },
@@ -26,6 +27,6 @@ export const Overview = {
         "sections": 3,
         "preview": "/thumbnails/einleitung.png",
         "enabled": false,
-        "available_from": "02.08.2022",
+        "available_from": "10.08.2022",
     }
 }

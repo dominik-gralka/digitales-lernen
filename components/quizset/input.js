@@ -40,7 +40,9 @@ export const InputQuiz = ({ question, answer, image }) => {
                         kurs={kurs}
                         section={section}
                     />
-                    <div className="text-left text-3xl font-semibold">{question}</div>
+                    <div className="text-left text-3xl font-semibold">
+                        <Latex>{question}</Latex>
+                    </div>
 
                     { /* Multiple Choice with max. one value */}
 

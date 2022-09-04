@@ -26,10 +26,12 @@ export default function handler(req, res) {
             if (result.length > 0) {
                 collection.replaceOne({ _id: result[0]._id }, newDoc, function(err, result) {
                     if (err) throw err;;
+                    res.status(200);
                 });
             } else {
                 collection.insertOne(newDoc, function(err, result) {
                     if (err) throw err;
+                    res.status(200);
                 });
             }
         });

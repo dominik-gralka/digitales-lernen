@@ -3,6 +3,7 @@ import { parseCookies, setCookie, destroyCookie } from 'nookies'
 
 import { Navbar } from '../components/navbar'
 import { CookieHandler } from '../components/cookie-handler'
+import { motion } from "framer-motion";
 
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
@@ -36,7 +37,7 @@ export default function Konto() {
             <Navbar />
 
             <CookieHandler />
-
+ 
             <Head>
                 <title>Digitales Lernen: Mein Konto</title>
                 <meta name="description" content="Meine Kontoübersicht" />
@@ -74,10 +75,10 @@ export default function Konto() {
                             <p className="text-2xl font-semibold pb-2">Mein Fortschritt</p>
                             <div className="flex">
                                 <div className='flex justify-center items-center pr-3'>
-                                    <svg className="w-20 h-20 -rotate-90">
+                                    <motion.svg initial={{rotate: -180}} animate={{rotate: -90}} transition={{ duration: 1, ease:"easeInOut" }} className="w-20 h-20">
                                         <circle className="text-gray-300" strokeWidth="8" stroke="currentColor" fill="transparent" r="30" cx="40" cy="40"></circle>
-                                        <circle className="text-green-500" strokeWidth="8" stroke="currentColor" fill="transparent" strokeLinecap="round" r="30" cx="40" cy="40" strokeDasharray={circumference} strokeDashoffset={circumference - data.percentage / 100 * circumference}></circle>
-                                    </svg>
+                                        <motion.circle initial={{ strokeDashoffset: circumference - 0 / 100 * circumference }} animate={{ strokeDashoffset: circumference - data.percentage / 100 * circumference }} transition={{ duration: 1, ease:"easeInOut" }} className="text-green-500" strokeWidth="8" stroke="currentColor" fill="transparent" strokeLinecap="round" r="30" cx="40" cy="40" strokeDasharray={circumference} strokeDashoffset={circumference - 50 / 100 * circumference}></motion.circle>
+                                    </motion.svg>
                                 </div>
                                 <p className="text-6xl font-bold py-5 transition-all cursor-default text-green-500">{data.percentage}%</p>
                             </div>

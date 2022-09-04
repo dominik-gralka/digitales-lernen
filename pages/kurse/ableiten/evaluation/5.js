@@ -9,10 +9,10 @@ export default function Image() {
     return (
         <>
             <MChoiceEval
-                image="/images/ableiten/eval/1.png"
-                question="Wie lautet die Ableitung von $f(x) = 2x^2 + 3x$?"
-                options={['$f(x)\'\=2x^2+3$', '$f(x)\'\=4x+3$', '$F(x)= \\frac{2}{3}x^3+\\frac{3}{2}x^2$', '$f(x)\'\=4x$']}
-                answer={1}
+                image="/images/ableiten/eval/5.png"
+                question="Wie lautet die Ableitung von $f(x) = -cos(x)$?"
+                options={['$f(x)\'\=sin(x)$', '$f(x)\'\=-sin(x)$', '$f(x)\'\=cos(x)$', '$f(x)\'\=-cos(x)$']}
+                answer={2}
             />
         </>
     )
