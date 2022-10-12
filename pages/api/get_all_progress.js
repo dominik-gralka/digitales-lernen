@@ -40,9 +40,13 @@ export default async function handler(req, res) {
         // Find document with highest section number
         const highest = await collection.find({ type: "progress" }).sort({ section: -1 }).limit(1).toArray();
 
+        // Find document with type "account-group"
+        const group = await collection.find({ type: "account-group" }).toArray();
+
         conn.close();
 
         res.status(200).json({
+            group: group[0].group,
             percentage: overall,
             newest: newest[0],
             highest: highest[0],

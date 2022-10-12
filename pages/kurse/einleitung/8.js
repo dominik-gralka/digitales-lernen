@@ -10,10 +10,10 @@ export default function MP() {
         <>
         <ProgressHandler />
         <MultipleChoiceQuiz
-            question="Wie schnell fährt der Fahrradfahrer in diesem Graph?"
-            options={ ['6km/h', "3km/h", "3,5km/h", "2,5km/h"] }
-            answer={ 3 }
-            image="/images/einleitung/mp-1-1.png"
+            question="Wie viel Öl ist in der ersten halben Stunden durch die Pipeline geflossen? [10L/h]"
+            options={ ['1,75L', "30L", "17,5L", "0,45L"] }
+            answer={ 2 }
+            image="/images/einleitung/mp-3-1.png"
 
         />
         </>

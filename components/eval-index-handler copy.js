@@ -37,14 +37,13 @@ export const IndexHandler = () => {
             return <></>
         }
 
-        if (data.section >= section && data.section != 1) {
-            return <div className="hidden">
+        if (section <= data.section) {
+            return <>
                 {
                     client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section) + 1}` : window.location.href = `/login?error=no_user`
                 }
-            </div>
+            </>
         }
-
     }
     
 }

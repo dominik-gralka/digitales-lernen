@@ -1,18 +1,21 @@
-//Einleitungsvideo
+// Auf- und Ableiten
 
-import { ProgressHandler } from "../../../components/progress-handler";
-import { ImageQuiz } from "../../../components/quizset/image";
+import { MultipleChoiceQuiz } from "../../../components/quizset/mchoice"
+import { ProgressHandler } from "../../../components/progress-handler"
 
-export default function Image() {
+import 'katex/dist/katex.min.css'
 
+export default function MP() {
     return (
         <>
         <ProgressHandler />
-            <ImageQuiz
-                image="/images/ableiten/wegfallen.png"
-                title='Ende des Kapitels'
-                description={'Dies ist das Ende des Kapitels. Bist du bereit, dein Wissen zu testen?'}
-            />
+        <MultipleChoiceQuiz
+            question="Welche Strecke legt der Fahrradfahrer in 2 Stunden zurück?"
+            options={ ['12km', "6km/h", "2km", "6km"] }
+            answer={ 0 }
+            image="/images/einleitung/mp-2-0.png"
+
+        />
         </>
     )
 }

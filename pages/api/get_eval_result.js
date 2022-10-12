@@ -31,6 +31,23 @@ export default async function handler(req, res) {
         const correct = result.filter((item) => item.correct).length;
         const percentage = Math.round(correct / info.eval_sections * 100);
 
+        // Create new document with type: eval_result
+        const eval_result = {
+            "type": "eval_result",
+            "kurs": kurs,
+            "correct": correct,
+            "percentage": percentage,
+            "timestamp": new Date()
+        }
+
+        // Insert new document if there is no document with type: eval_result
+        const result2 = await collection.find({ "kurs": kurs, "type": "eval_result" }).toArray();
+        if (result2.length === 0) {
+            await collection.insertOne(eval_result);
+        }
+
+        conn.close();
+
         res.status(200).json({ percentage: percentage, sections: result });
 
 

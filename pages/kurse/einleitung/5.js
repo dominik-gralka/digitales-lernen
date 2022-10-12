@@ -10,10 +10,10 @@ export default function MP() {
         <>
         <ProgressHandler />
         <MultipleChoiceQuiz
-            question="Wie schnell fährt der Fahrradfahrer in diesem Graph?"
-            options={ ['6km/h', "3km/h", "3,5km/h", "2,5km/h"] }
-            answer={ 3 }
-            image="/images/einleitung/mp-1-1.png"
+            question="Welche Strecke legt der Fahrradfahrer in 3 Stunden zurück?"
+            options={ ['10km', "7,5km", "3,5km", "0km"] }
+            answer={ 1 }
+            image="/images/einleitung/mp-2-1.png"
 
         />
         </>

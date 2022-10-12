@@ -25,7 +25,7 @@ export const SectionSelect = ({ kurs, code}) => {
                         <h2 className="p-5 text-2xl font-semibold">Lektionsauswahl</h2>
                         <XCircleIcon className="text-gray-300 w-8 m-5 hover:text-gray-400 transition-all" />
                     </div>
-                    <p className="px-5 text-lg">Wähle eine der folgenden Lektionen, an der du weiterarbeiten möchtest.</p>
+                    <p className="px-5 text-lg">Wähle eine der folgenden Lektionen, an der du arbeiten möchtest aus.</p>
                     
                     {/* Create as many numbered buttons next to each other as sections */}
                     <div className="justify-around pt-7 flex flex-row px-5 gap-2">

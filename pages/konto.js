@@ -64,8 +64,10 @@ export default function Konto() {
                         <div className="py-5">
                             <p className="text-2xl font-semibold pb-2">Konto-Status</p>
                             <div>
-                                <p className="text-6xl font-bold py-5 transition-all cursor-default text-green-500">Gruppe A</p>
-                                <span className='text-gray-400'>Du kannst an allen Kursen und Tests teilnehmen.</span>
+                                <p className="text-6xl font-bold py-5 transition-all cursor-default text-green-500">Gruppe { (data.group).toUpperCase() }</p>
+                                <span className='text-gray-400'>
+                                    { data.group == 'a' ? 'Du kannst an allen Kursen und Evaluationen teilnehmen.' : 'Du kannst an allen Evaluationen teilnehmen.' }
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -83,7 +85,7 @@ export default function Konto() {
                                 <p className="text-6xl font-bold py-5 transition-all cursor-default text-green-500">{data.percentage}%</p>
                             </div>
                             <span className='text-gray-400'>
-                                {data !== 100 ? 'Gut gemacht. Weiter so!' : 'Du hast alle Kurse abgeschlossen.'}
+                                {data !== 100 ? 'Gut gemacht. Das schaffst du!' : 'Du hast alle Kurse abgeschlossen.'}
                             </span>
                         </div>
                     </div>

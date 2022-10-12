@@ -9,7 +9,7 @@ export default function Image() {
         <>
         <ProgressHandler />
             <ImageQuiz
-                image="https://media.tenor.com/sjaFs_wpN38AAAAC/the-office-celebration.gif"
+                image="https://media.tenor.com/v4FpeS4fxBUAAAAC/celebration-celebrate.gif"
                 title='Ende des Kurses'
                 description={'Dies ist das Ende des Kurses. Bist du bereit, dein Wissen zu testen?'}
             />

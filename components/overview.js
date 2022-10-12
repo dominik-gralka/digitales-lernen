@@ -24,9 +24,9 @@ export const Overview = {
     "einleitung": {
         "title": "Einleitung",
         "description": "Erlerne die Grundlagen der Integralrechnung mit einem kurzen Einleitungsvideo.",
-        "sections": 3,
+        "sections": 9,
         "preview": "/thumbnails/einleitung.png",
         "enabled": false,
-        "available_from": "10.08.2022",
+        "available_from": "12.10.2022",
     }
 }

@@ -40,6 +40,79 @@ export const Card = ({ kurs }) => {
         </div>
     )
 
+    {
+        console.log(data.group)
+    }
+
+    if (data.group == "b" && !data.eval_result) {
+        return (
+            <div className="w-full 2xl:w-1/4 lg:w-96  border-2 rounded-md px-3 py-3 h-auto">
+
+                <div className={`${section ? '' : 'hidden'}`} onClick={() => setSection(false)}>
+                    <SectionSelect kurs={kurs} />
+                </div>
+
+                <div>
+                    <div className="overflow-hidden h-32 rounded-md flex justify-center items-center">
+                        <img src={info.preview} alt="logo" className="w-full md:hover:bg-h-m_gray transition-all h-32 object-cover" />
+                    </div>
+                </div>
+                <div className="pb-5 pt-3">
+                    <div className="text-xs font-medium pb-2">Integralrechnung • Evaluation</div>
+                    <h2 className="text-xl font-bold">{info.title}</h2>
+                    <p className="text-sm">{info.description}</p>
+                </div>
+                <div className={`flex flex-row`}>
+                    <div className={` w-full bg-blue-500 hover:bg-blue-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
+                        () => {
+                            window.location.href = '/kurse/' + kurs + '/evaluation';
+                        }
+                    }>Evaluation starten</div>
+                </div>
+                <progress className="w-full h-1 bg-gray-300" value={data.section - 1} max={info.sections}></progress>
+            </div>
+        )
+    }
+
+    if (data.eval_result) {
+        return (
+            <div className="w-full 2xl:w-1/4 lg:w-96  border-2 rounded-md px-3 py-3 h-auto">
+            
+            <div className={`${section ? '' : 'hidden'}`} onClick={() => setSection(false)}>
+                <SectionSelect kurs={ kurs }/>
+            </div>
+
+            <div>
+                <div className="overflow-hidden h-32 rounded-md flex justify-center items-center">
+                    <img src={info.preview} alt="logo" className="w-full md:hover:bg-h-m_gray transition-all h-32 object-cover" />
+                </div>
+            </div>
+            <div className="pb-5 pt-3">
+                <div className="text-xs font-medium pb-2">Integralrechnung ·
+                        <span className="text-green-500">
+                            Abgeschlossen
+                        </span>
+                </div>
+                <h2 className="text-xl font-bold">{info.title}</h2>
+                <p className="text-sm">{info.description}</p>
+            </div>
+            <div className={`flex flex-row`}>
+                <div className={` w-full bg-emerald-500 hover:bg-emerald-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
+                    () => {
+                        window.location.href = '/kurse/' + kurs + '/evaluation';
+                    }
+                }>Ergebnis einsehen</div>
+                { data.group == "a" ? (
+                    <div className='flex justify-center border-2 w-16 hover:bg-gray-50 bg-white transition-all text-center text-gray-400 font-bold py-3 rounded-lg cursor-pointer ml-3' onClick={() => setSection(true)}>
+                    <RefreshIcon className="w-5" />
+                </div>
+                ) : ("")}
+            </div>
+            <progress className="w-full h-1 bg-gray-300" value="1" max="1"></progress>
+        </div>
+        )
+    }
+
     if (!enabled && !bypass) {
         return (
             <div className="w-full 2xl:w-1/4 lg:w-96 border-2 rounded-md px-3 py-3 h-auto">
@@ -103,7 +176,7 @@ export const Card = ({ kurs }) => {
                 }
             }>Kurs anzeigen</div>
             <div className={`${data.section > info.sections ? '' : 'hidden'} flex flex-row`}>
-                <div className={` w-full bg-emerald-500 hover:bg-emerald-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
+                <div className={` w-full bg-purple-500 hover:bg-purple-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
                     () => {
                         window.location.href = '/kurse/' + kurs + '/evaluation';
                     }
