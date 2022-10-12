@@ -11,7 +11,7 @@ export default function Image() {
             <MChoiceEval
                 image="/images/ableiten/eval/4.png"
                 question="Wie lautet die Ableitung von $f(x) = sin(x)$?"
-                options={['$f(x)\'\=-sin(x)$', '$f(x)\'\=cos(x)$', '$f(x)\'\=sin(x)$', '$f(x)\'\=cos(x)$']}
+                options={['$f(x)\'\=-sin(x)$', '$f(x)\'\=-cos(x)$', '$f(x)\'\=sin(x)$', '$f(x)\'\=cos(x)$']}
                 answer={3}
             />
         </>
