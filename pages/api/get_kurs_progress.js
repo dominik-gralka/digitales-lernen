@@ -20,7 +20,18 @@ export default async function handler(req, res) {
         const group = await collection.find({ type: "account-group" }).toArray();
 
         // Find latest document with kurs = kurs
-        const result = await collection.findOne({ kurs: kurs });
+        let result = await collection.findOne({ kurs: kurs });
+
+        // If there is no result, return empty object
+        if (!result) {
+            result = {
+                type: "progress",
+                kurs: kurs,
+                section: 0,
+                started: false,
+                timestamp: new Date()
+            }
+        }
 
         if (group[0].group == "b") {
             // Apend group indicator to result

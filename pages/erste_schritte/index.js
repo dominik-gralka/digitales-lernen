@@ -54,6 +54,11 @@ export default function Home({ cookies }) {
                             <p className="text-base">Wann auch immer du dich bereit fühlst. Optimalerweise zum Ende der dementsprechenden Lektion in deinem Schulunterricht.</p>
                         </div>
 
+                        <div className="flex flex-col border-b-2 mt-5 py-5 lg:w-1/2">
+                            <h3 className="text-xl font-semibold pb-5">Was sind Testgruppen?</h3>
+                            <p className="text-base">Deine Testgruppe entscheidet, inwiefern du an &quot;Digitales Lernen&quot; teilnehmen kannst. In welcher Gruppe du bist, kannst du auf deiner <a className='underline font-semibold' href='./mein-konto'>Kontoübersicht</a> einsehen.</p>
+                        </div>
+
                     </section>
 
                 </div>

@@ -9,7 +9,7 @@ export default function Einleitungsvideo() {
         <>
         <ProgressHandler />
             <VideoQuiz
-                video="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+                video="/videos/Einleitung-1-1.mp4"
                 title="Praktische Anwendungsmöglichkeiten"
                 description="In diesem Video lernst du, wie du die Integralrechnung in der Praxis anwenden kannst."
             />

@@ -40,10 +40,6 @@ export const Card = ({ kurs }) => {
         </div>
     )
 
-    {
-        console.log(data.group)
-    }
-
     if (data.group == "b" && !data.eval_result) {
         return (
             <div className="w-full 2xl:w-1/4 lg:w-96  border-2 rounded-md px-3 py-3 h-auto">
@@ -176,7 +172,7 @@ export const Card = ({ kurs }) => {
                 }
             }>Kurs anzeigen</div>
             <div className={`${data.section > info.sections ? '' : 'hidden'} flex flex-row`}>
-                <div className={` w-full bg-purple-500 hover:bg-purple-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
+                <div className={` w-full bg-indigo-400 hover:bg-indigo-500 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`} onClick={
                     () => {
                         window.location.href = '/kurse/' + kurs + '/evaluation';
                     }
