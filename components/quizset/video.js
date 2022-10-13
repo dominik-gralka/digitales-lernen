@@ -36,7 +36,7 @@ export const VideoQuiz = ({ video, title, description }) => {
                         <source src={video} type="video/mp4" />
                     </video>
                 </div>
-                <div className="flex flex-col items-start w-full">
+                <div className="flex flex-col items-start w-full lg:h-auto h-96">
                     <ProgressText
                         kurs={kurs}
                         section={section}

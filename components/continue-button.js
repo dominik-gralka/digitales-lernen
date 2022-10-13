@@ -11,7 +11,7 @@ export const Continue = ({ kurs, section, enabled }) => {
         <>
             {parseInt(section) > parseInt(info.sections) ?
                 <div className="fixed inset-x-0 bottom-7 mx-10 lg:mx-0 lg:bottom-0 lg:relative lg:w-full mt-auto">
-                    <div className="w-auto bg-emerald-500 hover:bg-emerald-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer" onClick={
+                    <div className="w-auto bg-indigo-400 hover:bg-indigo-500 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer" onClick={
                         () => {
                             window.location.href = "/kurse/" + kurs + "/evaluation";
                         }
