@@ -13,6 +13,7 @@ export const Overview = {
         "sections": 3,
         "preview": "/thumbnails/aufleiten.png",
         "enabled": false,
+        "available_from": "15.10.2022"
     },
     "integrieren": {
         "title": "Integrieren",
@@ -20,6 +21,7 @@ export const Overview = {
         "sections": 3,
         "preview": "/thumbnails/integrieren.png",
         "enabled": false,
+        "available_from": "17.10.2022"
     },
     "einleitung": {
         "title": "Einleitung",
