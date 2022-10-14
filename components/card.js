@@ -40,7 +40,7 @@ export const Card = ({ kurs }) => {
         </div>
     )
 
-    if (data.group == "b" && !data.eval_result) {
+    if (data.group == "b" && !data.eval_result && enabled) {
         return (
             <div className="w-full 2xl:w-1/4 lg:w-96  border-2 rounded-md px-3 py-3 h-auto">
 
@@ -127,7 +127,9 @@ export const Card = ({ kurs }) => {
                 <h2 className="text-xl font-bold">{info.title}</h2>
                 <p className="text-sm">{info.description}</p>
             </div>
-            <div className={`w-full opacity-50 animate-pulse bg-gray-500 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`}>Kurs anzeigen</div>
+            <div className={`w-full opacity-50 animate-pulse bg-gray-500 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`}>
+                { data.group == "b" ? "Evaluation starten" : "Kurs anzeigen" }
+            </div>
             <progress className="w-full h-1 bg-gray-300" value={data.section - 1} max={info.sections}></progress>
         </div>
         )
