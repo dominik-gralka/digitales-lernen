@@ -10,7 +10,7 @@ export default function MP() {
         <>
         <ProgressHandler />
         <MultipleChoiceQuiz
-            question="Wie viel Öl ist in der ersten halben Stunden durch die Pipeline geflossen? [10L/h]"
+            question="Wie viel Öl ist in der ersten halben Stunde durch die Pipeline geflossen? [10L/h]"
             options={ ['1,75L', "30L", "17,5L", "0,45L"] }
             answer={ 2 }
             image="/images/einleitung/mp-3-1.png"
