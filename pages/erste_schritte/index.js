@@ -7,9 +7,20 @@ import { CookieHandler } from '../../components/cookie-handler'
 
 import { useRouter } from 'next/router'
 
+import useSWR from 'swr'
+import { Loading } from '../../components/loading'
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
+
 export default function Home({ cookies }) {
 
     const router = useRouter();
+    const client = parseCookies().fromClient;
+    const { data, error } = useSWR('/api/get_all_progress?user=' + client, fetcher);
+
+    if (!data) {
+        return <Loading/>
+    }
 
     return (
         <div className="px-7 lg:px-32 min-h-screen">
@@ -29,7 +40,22 @@ export default function Home({ cookies }) {
                 <h1 className="text-4xl font-bold py-2">Willkommen,</h1>
                 <h2 className="text-lg pt-2 font-medium pb-10">auf dieser Seite findest du erste Schritte zum digitalen Lernen.</h2>
 
-                <div className="m<-10 h-auto">
+                <div className="h-auto">
+
+                <h2 className="text-3xl font-semibold pb-5">Du wurdest folgender Gruppe zugeteilt</h2>
+                <div className="my-10 lg:w-96 w-full border-2 rounded-xl p-2 pl-5">
+                        <div className="py-5">
+                            <p className="text-2xl font-semibold pb-2">Konto-Status</p>
+                            <div>
+                                <p className="text-4xl font-bold py-5 transition-all cursor-default text-green-500">Gruppe { (data.group).toUpperCase() }</p>
+                                <span className='text-gray-400'>
+                                    { data.group == 'a' ? 'Du kannst an allen Kursen und Evaluationen teilnehmen.' : 'Du kannst an allen Evaluationen teilnehmen.' }
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr className="py-10"/>
 
                     <section className="mb-20 text-gray-800">
                         <h2 className="text-3xl font-semibold pb-5">Häufig gestelle Fragen</h2>
@@ -46,7 +72,7 @@ export default function Home({ cookies }) {
 
                         <div className="flex flex-col border-b-2 mt-5 py-5 lg:w-1/2">
                             <h3 className="text-xl font-semibold pb-5">Habe ich eine Zeitbegrenzung?</h3>
-                            <p className="text-base">Du hast keine zeitlichen Limitierungen. Nimm&apos; dir also gerne auch mal Zeit um ein Themengebiet zu wiederholen oder es zu vertiefen</p>
+                            <p className="text-base">Du hast keine zeitlichen Einschränkungen. Nimm&apos; dir also gerne auch mal Zeit um ein Themengebiet zu wiederholen oder es zu vertiefen</p>
                         </div>
 
                         <div className="flex flex-col border-b-2 mt-5 py-5 lg:w-1/2">

@@ -47,7 +47,7 @@ export default function Home() {
                 <span>Digitales Lernen</span>
                 <h1 className="text-4xl font-bold py-2">Meine Daten exportieren</h1>
 
-                <Link href="/konto">
+                <Link href="/mein-konto">
                     <div className="mt-10 cursor-pointer lg:text-sm font-semibold">← Zurück zur Kontoübersicht</div>
                 </Link>
 

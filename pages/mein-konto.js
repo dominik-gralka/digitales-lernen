@@ -85,7 +85,7 @@ export default function Konto() {
                                 <p className="text-6xl font-bold py-5 transition-all cursor-default text-green-500">{data.percentage}%</p>
                             </div>
                             <span className='text-gray-400'>
-                                {data !== 100 ? 'Gut gemacht. Das schaffst du!' : 'Du hast alle Kurse abgeschlossen.'}
+                                {data !== 100 ? 'Gut gemacht. Du schaffst das!' : 'Du hast alle Kurse abgeschlossen.'}
                             </span>
                         </div>
                     </div>

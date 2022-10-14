@@ -21,7 +21,9 @@ export default async function handler(req, res) {
         // Delete all documents from the collection if user_query is fromClient
 
         if (fromClient == user_query) {
-            const result = await collection.deleteMany({});
+            
+            // Delete all documents from the collection
+            const delete_all = await collection.deleteMany({});
 
             // Create document with type: termination
             const termination = {

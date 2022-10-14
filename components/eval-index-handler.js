@@ -23,21 +23,32 @@ export const IndexHandler = () => {
             return <Loading />
         }
 
-        return (
-            <>
-                <Loading />
-                {
-                    client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section) + 1}` : window.location.href = `/login?error=no_user`
-                }
-            </>
-        )
+        if (data.section == 1) {
+            return (
+                <>
+                    <Loading />
+                    {
+                        client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section)}` : window.location.href = `/login?error=no_user`
+                    }
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <Loading />
+                    {
+                        client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section) + 1}` : window.location.href = `/login?error=no_user`
+                    }
+                </>
+            )
+        }
     } else {
 
         if (!data) {
             return <></>
         }
 
-        if (data.section >= section && data.section != 1) {
+        if (parseInt(data.section) >= parseInt(section) && data.section != 1) {
             return <div className="hidden">
                 {
                     client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section) + 1}` : window.location.href = `/login?error=no_user`

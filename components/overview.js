@@ -27,6 +27,7 @@ export const Overview = {
         "title": "Einleitung",
         "description": "Erlerne die Grundlagen der Integralrechnung in diesem einleitenden Kurs.",
         "sections": 9,
+        "eval_sections": 6,
         "preview": "/thumbnails/einleitung.png",
         "enabled": true,
     },
