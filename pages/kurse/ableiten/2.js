@@ -9,9 +9,9 @@ export default function Image() {
         <>
         <ProgressHandler />
             <ImageQuiz
-                image="/images/ableiten/wegfallen.png"
-                title='Wegfallen von Zahlen'
-                description={'Leiten wir eine Zahl ab, fällt eine alleinstehende Zahl in der letztendlichen Ableitung weg. Du kannst dir eine alleinstehende Zahl als z.B. $5x^0$ vorstellen. Multiplizieren wir den Exponenten 0 mit der 5 ergibt dieses Polynom immer 0. Somit fällt die Zahl weg.'}
+                image="/images/ableiten/polynom.png"
+                title='Ableitung nach Polynomen'
+                description={'Hast du eine Funktion, die aus mehreren Teilen besteht wie $f(x) = 2x^2 + 3x$ kannst du einfach Polynom für Polynom ableiten. Du fängst erstmal mit $2x^2$ an und leitest dann $3x$ ab. Deine Ergebnis lautet dann $4x + 3$.'}
             />
         </>
     )

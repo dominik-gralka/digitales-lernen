@@ -10,7 +10,7 @@ export const Overview = {
     "stammfunktion": {
         "title": "Stammfunktion bilden / Aufleiten",
         "description": "Bereite dich mit Stammfunktionen auf die Integralrechnung vor",
-        "sections": 3,
+        "sections": 4,
         "preview": "/thumbnails/aufleiten.png",
         "enabled": false,
         "available_from": "15.10.2022"

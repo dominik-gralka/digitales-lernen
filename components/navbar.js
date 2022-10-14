@@ -41,15 +41,15 @@ export const Navbar = () => {
         >
           <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
 
-            <Link href='/erste_schritte'>
-              <a className='lg:inline-flex lg:w-auto w-full sm:mx-10 py-2 font-medium rounded text-black items-center justify-center hover:text-h-gray transition-all'>
-                Erste Schritte
-              </a>
-            </Link>
-
             <Link href='/'>
               <a className='lg:inline-flex lg:w-auto w-full sm:mx-10 py-2 font-medium rounded text-black items-center justify-center hover:text-h-gray transition-all'>
                 Kurse
+              </a>
+            </Link>
+
+            <Link href='/erste_schritte'>
+              <a className='lg:inline-flex lg:w-auto w-full sm:mx-10 py-2 font-medium rounded text-black items-center justify-center hover:text-h-gray transition-all'>
+                Erste Schritte
               </a>
             </Link>
 

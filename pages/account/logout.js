@@ -7,9 +7,11 @@ export default function Logout() {
     destroyCookie(null, 'fromClient', { path: '/' });
     // Redirect to login page
     const router = useRouter();
+
+    const code = router.query.code;
     
     useEffect(() => {
-        router.push('/login');
+        router.push('/login' + (code ? '?code=' + code : ''));
     }, [])
 
     return (<></>);

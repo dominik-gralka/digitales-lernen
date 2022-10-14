@@ -24,6 +24,7 @@ export default function Login() {
 
   // Get error query from router
   const error = router.query.error;
+  const code = router.query.code;
 
   return (
     <div className="px-7 lg:px-32 min-h-screen">
@@ -56,6 +57,14 @@ export default function Login() {
         <div className="bg-red-500 text-red-500 font-semibold rounded-lg text-center py-4 bg-opacity-10">
           <p className="p-2">
             Benutzerkonto gekündigt - Du hast keinen Zugriff auf diese Plattform.
+          </p>
+        </div>
+      ) : null}
+
+      {code == "logged_out" ? (
+        <div className="bg-green-500 text-green-500 font-semibold rounded-lg text-center py-4 bg-opacity-10">
+          <p className="p-2">
+            Du wurdest erfolgreich abgemeldet.
           </p>
         </div>
       ) : null}

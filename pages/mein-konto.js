@@ -54,7 +54,7 @@ export default function Konto() {
                     <div className="mt-10 rounded-lg">
                         <a className="bg-blue-200 p-2 rounded-md font-medium text-sm mb-5 ">Vertraulich</a>
                         <p className="text-2xl font-semibold pb-2 pt-5">Mein Anmeldecode</p>
-                        <p className={`${visible ? '' : 'blur-md'} text-6xl font-bold py-5 transition-all cursor-default text-blue-500`}
+                        <p className={`${visible ? '' : 'blur-md'} text-6xl font-bold py-5 transition-all cursor-default text-blue-500 select-none`}
                             onClick={() => setVisible(!visible)}
                         >{client}</p>
                         <span className='text-gray-400'>Klicke auf das Feld um deinen Code anzuzeigen.</span>
@@ -85,7 +85,7 @@ export default function Konto() {
                                 <p className="text-6xl font-bold py-5 transition-all cursor-default text-green-500">{data.percentage}%</p>
                             </div>
                             <span className='text-gray-400'>
-                                {data !== 100 ? 'Gut gemacht. Du schaffst das!' : 'Du hast alle Kurse abgeschlossen.'}
+                                {data.percentage !== 100 ? 'Gut gemacht. Du schaffst das!' : 'Du hast alle Kurse abgeschlossen. 🥳'}
                             </span>
                         </div>
                     </div>
@@ -122,7 +122,7 @@ export default function Konto() {
                             <a className="bg-orange-400 hover:bg-orange-500 transition-all p-3 px-5 flex justify-center text-white rounded-md font-lg text-sm mb-5">Nutzerkonto nach Art. 17 DSGVO kündigen</a>
                         </Link>
 
-                        <Link href="/account/logout">
+                        <Link href="/account/logout?code=logged_out">
                             <a className="bg-red-500 hover:bg-red-600 transition-all p-3 px-5 flex justify-center text-white rounded-md font-lg text-sm mb-5">Abmelden</a>
                         </Link>
 
