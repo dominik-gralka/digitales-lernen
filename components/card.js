@@ -120,7 +120,7 @@ export const Card = ({ kurs }) => {
             </div>
             <div className="pb-5 pt-3">
                 <div className="text-xs font-medium pb-2">
-                    <span className="text-red-500">
+                    <span className="text-gray-500">
                             { info.available_from ? `Verfügbar ab ${info.available_from}` : "Aktuell nicht verfügbar" }
                     </span>
                 </div>
