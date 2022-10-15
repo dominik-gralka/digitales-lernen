@@ -28,7 +28,7 @@ export default async function handler(req, res) {
             res.status(200).json({
                 "type": "eval",
                 "kurs": kurs,
-                "section": 1,
+                "section": 0,
                 "started": false,
                 "timestamp": new Date()
             });

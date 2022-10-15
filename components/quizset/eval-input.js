@@ -3,7 +3,7 @@ import { Navbar } from "../navbar"
 import { useRouter } from "next/router"
 import { ProgressText } from "../progresstext"
 import { CheckAndContinue } from "../check-button"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Latex from "react-latex-next"
 import Head from "next/head"
 import { ContinueEval } from "../eval-continue-button"
@@ -52,11 +52,17 @@ export const InputEval = ({ question, answer, image }) => {
 
                     { /* Multiple Choice with max. one value */}
 
-                    <form className="flex flex-col lg:gap-5 gap-2 pt-5 lg:flex-col lg:pt-5 w-full h-96">
+                    <form className="flex flex-col lg:gap-5 gap-2 pt-5 lg:flex-col lg:pt-5 w-full h-full" onSubmit={
+                        (e) => {
+                            e.preventDefault();
+                            // Simulate click on button with id "continue"
+                            document.getElementById("continue").click();
+                        }
+                    }>
 
                         {/* Number input */}
                         <div className="flex flex-row items-center justify-start w-full lg:w-auto bg-gray-50 border-2 border-gray-100 rounded-md h-auto">
-                            <input type="number" name="option" id="option" className="w-full bg-gray-50 p-2.5" value={selected} onChange={
+                            <input type="text" name="option" id="option" className="w-full bg-gray-50 p-2.5" onChange={
                                 (e) => {
 
                                     e.preventDefault();
