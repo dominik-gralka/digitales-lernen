@@ -28,7 +28,7 @@ export const IndexHandler = () => {
                 <>
                     <Loading />
                     {
-                        client ? window.location.href = `/kurse/${data.kurs}/evaluation/1}` : window.location.href = `/login?error=no_user`
+                        client ? window.location.href = `/kurse/${data.kurs}/evaluation/1` : window.location.href = `/login?error=no_user`
                     }
                 </>
             )
