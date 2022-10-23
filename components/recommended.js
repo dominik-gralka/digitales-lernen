@@ -32,12 +32,20 @@ export const Recommended = ({ client }) => {
     )
 
 
+    //return (
+    //    <div>
+    //        <div className="pb-5">
+    //            <a className="bg-emerald-200 p-2 rounded-md font-medium text-sm">Vorgeschlagen</a>
+    //        </div>
+    //        <Card kurs={ data.kurs } section={ data.section } />
+    //    </div>
+    //)
     return (
         <div>
             <div className="pb-5">
                 <a className="bg-emerald-200 p-2 rounded-md font-medium text-sm">Vorgeschlagen</a>
             </div>
-            <Card kurs={ data.kurs } section={ data.section } />
+            <Card kurs="einleitung" />
         </div>
     )
 }
