@@ -21,39 +21,39 @@ export const IndexHandler = () => {
     if (section == undefined) {
         if (!data) {
             return <Loading />
-        }
-
-        if (data.section == 0) {
-            return (
-                <>
-                    <Loading />
-                    {
-                        client ? window.location.href = `/kurse/${data.kurs}/evaluation/1` : window.location.href = `/login?error=no_user`
-                    }
-                </>
-            )
         } else {
-            return (
-                <>
-                    <Loading />
-                    {
-                        client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section) + 1}` : window.location.href = `/login?error=no_user`
-                    }
-                </>
-            )
+            if (data.section == 0) {
+                return (
+                    <>
+                        <Loading />
+                        {
+                            client ? window.location.href = `/kurse/${data.kurs}/evaluation/1` : window.location.href = `/login?error=no_user`
+                        }
+                    </>
+                )
+            } else {
+                return (
+                    <>
+                        <Loading />
+                        {
+                            client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section) + 1}` : window.location.href = `/login?error=no_user`
+                        }
+                    </>
+                )
+            }      
         }
     } else {
 
         if (!data) {
             return <></>
-        }
-
-        if ((parseInt(data.section) + 1) !== parseInt(section)) {
-            return <div className="hidden">
-                {
-                    client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section) + 1}` : window.location.href = `/login?error=no_user`
-                }
-            </div>
+        } else {
+            if ((parseInt(data.section) + 1) !== parseInt(section)) {
+                return <div className="hidden">
+                    {
+                        client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section) + 1}` : window.location.href = `/login?error=no_user`
+                    }
+                </div>
+            }
         }
 
     }
