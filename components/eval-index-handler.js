@@ -48,11 +48,20 @@ export const IndexHandler = () => {
             return <></>
         }
 
-        if ((parseInt(data.section) + 1) !== parseInt(section)) {
-            return <div className="hidden">
-                {
-                    client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section) + 1}` : window.location.href = `/login?error=no_user`
-                }
+        //if ((parseInt(data.section) + 1) !== parseInt(section)) {
+        //    return <div className="hidden">
+        //        {
+        //            client ? window.location.href = `/kurse/${data.kurs}/evaluation/${parseInt(data.section) + 1}` : window.location.href = `/login?error=no_user`
+        //        }
+        //    </div>
+        //}
+
+        if (parseInt(data.section) >= parseInt(section)) {
+            // Return warning that progress is not saved
+            return <div className="bg-red-500 text-red-500 font-semibold rounded-lg text-center py-4 mb-5 bg-opacity-10">
+                <p className="p-2">
+                    Du hast diese Frage bereits beantwortet. Deine Antwort wird nicht überschrieben.
+                </p>
             </div>
         }
 

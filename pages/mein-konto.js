@@ -72,7 +72,7 @@ export default function Konto() {
                         </div>
                     </div>
 
-                    <div className="lg:mt-10 w-full border-2 rounded-xl p-2 pl-5">
+                    <div className={` ${ data.percentage <= 0 ? "hidden" : "" } lg:mt-10 w-full border-2 rounded-xl p-2 pl-5`}>
                         <div className="py-5">
                             <p className="text-2xl font-semibold pb-2">Mein Fortschritt</p>
                             <div className="flex">
