@@ -21,7 +21,7 @@ export const Overview = {
         "sections": 3,
         "preview": "/thumbnails/integrieren.png",
         "enabled": false,
-        "available_from": "27.10.2022"
+        "available_from": "30.10.2022"
     },
     "einleitung": {
         "title": "Einleitung",
@@ -37,6 +37,7 @@ export const Overview = {
         "sections": 0,
         "preview": "/thumbnails/placeholder.png",
         "enabled": false,
+        "available_from": "06.11.2022"
     },
     "zwischen_den_integralen": {
         "title": "Zwischen den Integralen",
@@ -44,6 +45,7 @@ export const Overview = {
         "sections": 0,
         "preview": "/thumbnails/placeholder.png",
         "enabled": false,
+        "available_from": "13.11.2022"
     },
     "rotationsintegrale": {
         "title": "Rotationsintegrale",
@@ -51,6 +53,7 @@ export const Overview = {
         "sections": 0,
         "preview": "/thumbnails/placeholder.png",
         "enabled": false,
+        "available_from": "20.11.2022"
     },
 
 }
