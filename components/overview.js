@@ -21,7 +21,7 @@ export const Overview = {
         "sections": 3,
         "preview": "/thumbnails/integrieren.png",
         "enabled": false,
-        "available_from": "30.10.2022"
+        "available_from": "04.11.2022"
     },
     "einleitung": {
         "title": "Einleitung",

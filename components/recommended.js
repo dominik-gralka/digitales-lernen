@@ -45,7 +45,7 @@ export const Recommended = ({ client }) => {
             <div className="pb-5">
                 <a className="bg-emerald-200 p-2 rounded-md font-medium text-sm">Vorgeschlagen</a>
             </div>
-            <Card kurs="einleitung" />
+            <Card kurs="stammfunktion" />
         </div>
     )
 }
