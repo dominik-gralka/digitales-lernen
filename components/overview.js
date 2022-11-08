@@ -37,7 +37,7 @@ export const Overview = {
         "sections": 0,
         "preview": "/thumbnails/placeholder.png",
         "enabled": false,
-        "available_from": "06.11.2022"
+        "available_from": "11.11.2022"
     },
     "zwischen_den_integralen": {
         "title": "Zwischen den Integralen",
@@ -45,7 +45,7 @@ export const Overview = {
         "sections": 0,
         "preview": "/thumbnails/placeholder.png",
         "enabled": false,
-        "available_from": "13.11.2022"
+        "available_from": "17.11.2022"
     },
     "rotationsintegrale": {
         "title": "Rotationsintegrale",
