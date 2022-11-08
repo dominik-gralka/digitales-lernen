@@ -18,10 +18,10 @@ export const Overview = {
     "integrieren": {
         "title": "Integrieren",
         "description": "Begebe dich mit diesem Kurs in den Hauptsatz der Integralrechnung.",
-        "sections": 3,
+        "sections": 12,
+        "eval_sections": 7,
         "preview": "/thumbnails/integrieren.png",
-        "enabled": false,
-        "available_from": "04.11.2022"
+        "enabled": true,
     },
     "einleitung": {
         "title": "Einleitung",

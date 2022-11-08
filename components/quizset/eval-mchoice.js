@@ -64,7 +64,7 @@ export const MChoiceEval = ({ question, options, answer, image }) => {
 
                     { /* Multiple Choice with max. one value */}
 
-                    <form className="flex flex-col lg:gap-5 gap-2 pt-5 lg:flex-col lg:pt-5 w-full h-auto">
+                    <form className="flex flex-col lg:gap-5 gap-2 pt-5 lg:flex-col lg:pt-5 w-full h-full">
 
                         {options.map((option, index) => {
                             return (
