@@ -12,7 +12,7 @@ export default function MP() {
         <MultipleChoiceQuiz
             question="Was ist hierbei eingezeichnet?"
             options={ ['Bestand', 'Änderungsrate', 'Wert der Integrationsvariable', 'Maximum des Graphen'] }
-            answer={ 1 }
+            answer={ 0 }
             image="/images/integrieren/mp-06.png"
 
         />
