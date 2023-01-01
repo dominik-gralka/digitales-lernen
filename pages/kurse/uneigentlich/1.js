@@ -9,9 +9,9 @@ export default function Einleitungsvideo() {
         <>
         <ProgressHandler />
             <VideoQuiz
-                video="/videos/Stammfunktion.mp4"
+                video="/videos/Uneigentlich.mp4"
                 title="Einleitungsvideo"
-                description="Das Bilden der Stammfunktion ist ein integraler Bestandteil der Integralrechnung. Erfahre hier, wie du die Stammfunktion von Funktionen berechnen kannst."
+                description="In diesem Einleitungsvideo erfährst du, was passiert, wenn du eine Funktion bis zur Unendlichkeit integrierst."
             />
         </>
     )

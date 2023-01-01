@@ -31,13 +31,14 @@ export const Overview = {
         "preview": "/thumbnails/einleitung.png",
         "enabled": true,
     },
-    "uneigentliche_integrale": {
+    "uneigentlich": {
         "title": "Uneigentliche Integrale",
         "description": "Eigentlich, uneigentlich, was heißt das eigentlich? Dies erfährst du hier!",
-        "sections": 0,
-        "preview": "/thumbnails/placeholder.png",
-        "enabled": false,
-        "available_from": "23.11.2022"
+        "sections": 5,
+        "eval_sections": 3,
+        "preview": "/thumbnails/uneigentlich.png",
+        "enabled": true,
+        "available_from": "01.01.2023"
     },
     "zwischen_den_integralen": {
         "title": "Zwischen den Integralen",
@@ -45,7 +46,7 @@ export const Overview = {
         "sections": 0,
         "preview": "/thumbnails/placeholder.png",
         "enabled": false,
-        "available_from": "27.11.2022"
+        "available_from": "08.01.2023"
     },
     "rotationsintegrale": {
         "title": "Rotationsintegrale",
@@ -53,7 +54,7 @@ export const Overview = {
         "sections": 0,
         "preview": "/thumbnails/placeholder.png",
         "enabled": false,
-        "available_from": "30.11.2022"
+        "available_from": "08.01.2023"
     },
 
 }

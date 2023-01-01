@@ -60,7 +60,7 @@ export default function Home({ cookies }) {
             </div>
             <h2 className="text-xl font-medium py-5">Kapitel 2: Anwendungen der Integralrechnung</h2>
             <div className="flex flex-col lg:flex-row gap-10">
-              <Card kurs="uneigentliche_integrale" />
+              <Card kurs="uneigentlich" />
               <Card kurs="zwischen_den_integralen" />
               <Card kurs="rotationsintegrale" />
             </div>
