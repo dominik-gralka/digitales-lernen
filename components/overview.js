@@ -43,7 +43,7 @@ export const Overview = {
     "zwischen_den_integralen": {
         "title": "Zwischen den Integralen",
         "description": "Erlerne die Berechnung von Flächen zwischen zwei Integralen.",
-        "sections": 0,
+        "sections": 7,
         "preview": "/thumbnails/placeholder.png",
         "enabled": false,
         "available_from": "08.01.2023"
