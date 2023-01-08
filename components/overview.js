@@ -55,7 +55,7 @@ export const Overview = {
         "sections": 0,
         "preview": "/thumbnails/placeholder.png",
         "enabled": false,
-        "available_from": "08.01.2023"
+        "available_from": "13.01.2023"
     },
 
 }
