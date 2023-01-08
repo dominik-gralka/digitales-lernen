@@ -88,7 +88,7 @@ export default function Konto() {
                                     }
 
                                     return (
-                                        <div className={`flex justify-between items-center py-2 my-2 px-5 mr-3 rounded-md ${"bg-" + color} ${"text-" + color} bg-opacity-20 hover:bg-opacity-30 hover:text-black`}>
+                                        <div className={`flex justify-between items-center py-2 my-2 px-5 mr-3 rounded-md ${"bg-" + color} ${"text-" + color} bg-opacity-20`} key={index}>
                                             <p className="text-md font-semibold">{
                                                 // Get title from overview
                                                 Overview[item.kurs].title
