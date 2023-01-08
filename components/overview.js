@@ -42,10 +42,11 @@ export const Overview = {
     },
     "zwischen_den_integralen": {
         "title": "Zwischen den Integralen",
-        "description": "Erlerne die Berechnung von Flächen zwischen zwei Integralen.",
+        "description": "Erlerne die Berechnung von Flächen zwischen zwei Funktionen.",
         "sections": 7,
-        "preview": "/thumbnails/placeholder.png",
-        "enabled": false,
+        "eval_sections": 4,
+        "preview": "/thumbnails/zwischen_den_integralen.png",
+        "enabled": true,
         "available_from": "08.01.2023"
     },
     "rotationsintegrale": {
