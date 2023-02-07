@@ -50,7 +50,7 @@ export const CheckAndContinue = ({ kurs, section, answer, selected }) => {
                         <div className={`${correct == false ? '' : 'hidden'} w-full bg-red-500 hover:bg-red-600 transition-all text-center text-white font-medium py-3 rounded-lg cursor-pointer`}>Leider nicht korrekt</div>
 
                         { /* Show help button after second attempt */}
-                        <motion.div className={`${counter >= 2 ? '' : 'hidden'} border-2 w-16 bg-gray-900 hover:bg-emerald-500 hover:text-white transition-all text-center text-gray-400 font-bold py-3 rounded-lg cursor-pointer ml-3`}>?</motion.div>
+                        {/*<motion.div className={`${counter >= 2 ? '' : 'hidden'} border-2 w-16 bg-gray-900 hover:bg-emerald-500 hover:text-white transition-all text-center text-gray-400 font-bold py-3 rounded-lg cursor-pointer ml-3`}>?</motion.div>*/}
 
 
                     </div>
