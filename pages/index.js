@@ -62,7 +62,7 @@ export default function Home({ cookies }) {
             <div className="flex flex-col lg:flex-row gap-10">
               <Card kurs="uneigentlich" />
               <Card kurs="zwischen_den_integralen" />
-              <Card kurs="rotationsintegrale" />
+              {/*<Card kurs="rotationsintegrale" />*/}
             </div>
             <h2 className="text-xl font-medium py-5">Wiederholen</h2>
             <div className="flex flex-col lg:flex-row gap-10">
